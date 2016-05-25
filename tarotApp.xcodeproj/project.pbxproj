@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85C5F0E01CF6689000B409A3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */; };
 		85F44A531CF64436003E372E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A521CF64436003E372E /* AppDelegate.swift */; };
 		85F44A551CF64436003E372E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A541CF64436003E372E /* ViewController.swift */; };
 		85F44A581CF64436003E372E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A561CF64436003E372E /* Main.storyboard */; };
 		85F44A5A1CF64436003E372E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A591CF64436003E372E /* Assets.xcassets */; };
 		85F44A5D1CF64436003E372E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A5B1CF64436003E372E /* LaunchScreen.storyboard */; };
+		85F44A651CF65E7B003E372E /* mocmoc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A641CF65E7B003E372E /* mocmoc.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		85F44A4F1CF64436003E372E /* tarotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F44A521CF64436003E372E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F44A541CF64436003E372E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		85F44A591CF64436003E372E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F44A5C1CF64436003E372E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85F44A5E1CF64436003E372E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85F44A641CF65E7B003E372E /* mocmoc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mocmoc.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				85F44A521CF64436003E372E /* AppDelegate.swift */,
+				85F44A641CF65E7B003E372E /* mocmoc.jpg */,
 				85F44A541CF64436003E372E /* ViewController.swift */,
 				85F44A561CF64436003E372E /* Main.storyboard */,
+				85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */,
 				85F44A591CF64436003E372E /* Assets.xcassets */,
 				85F44A5B1CF64436003E372E /* LaunchScreen.storyboard */,
 				85F44A5E1CF64436003E372E /* Info.plist */,
@@ -126,6 +132,7 @@
 				85F44A5D1CF64436003E372E /* LaunchScreen.storyboard in Resources */,
 				85F44A5A1CF64436003E372E /* Assets.xcassets in Resources */,
 				85F44A581CF64436003E372E /* Main.storyboard in Resources */,
+				85F44A651CF65E7B003E372E /* mocmoc.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +145,7 @@
 			files = (
 				85F44A551CF64436003E372E /* ViewController.swift in Sources */,
 				85F44A531CF64436003E372E /* AppDelegate.swift in Sources */,
+				85C5F0E01CF6689000B409A3 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,7 @@
 				85F44A631CF64436003E372E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
