@@ -11,9 +11,9 @@ import Foundation
 
 class ResultViewController: UIViewController {
     @IBOutlet weak var numberImageView: UIImageView!
+    @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var nameImageView: UIImageView!
     @IBOutlet weak var faceImageView: UIImageView!
-    @IBOutlet weak var resultTextView: UITextView!
     
     @IBAction func backButton(sender: AnyObject) {
     }
@@ -57,10 +57,8 @@ class ResultViewController: UIViewController {
         if let text = arr![cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
             caption = text
         }
-        
-        print("caaaan = \(caption)")
-        resultTextView.text = caption
-        initViewShadow(resultTextView)
+        testLabel.text = caption
+        initViewShadow(testLabel)
         
     }
     
