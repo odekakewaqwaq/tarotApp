@@ -38,8 +38,10 @@ class ResultViewController: UIViewController {
         initViewShadow(numberImageView)
         
         let nameImage:UIImage? = UIImage(named:"name_u_\(cardNum)")
+        nameImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200.0)
         nameImageView.image = nameImage
         initViewShadow(nameImageView)
+        
         
         let faceImage:UIImage? = UIImage(named:"face\(cardNum)")
         faceImageView.image = faceImage

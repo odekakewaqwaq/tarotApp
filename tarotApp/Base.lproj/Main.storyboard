@@ -36,7 +36,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name_r_13" translatesAutoresizingMaskIntoConstraints="NO" id="roZ-aH-QYP">
                                         <rect key="frame" x="0.0" y="0.0" width="38" height="301"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="num_10" translatesAutoresizingMaskIntoConstraints="NO" id="SC8-sK-TFP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="num_10" translatesAutoresizingMaskIntoConstraints="NO" id="SC8-sK-TFP">
                                         <rect key="frame" x="234" y="0.0" width="38" height="301"/>
                                     </imageView>
                                 </subviews>
@@ -48,10 +48,8 @@
                                     <constraint firstItem="roZ-aH-QYP" firstAttribute="leading" secondItem="M67-hx-YbA" secondAttribute="leading" id="amv-6q-Ecy"/>
                                     <constraint firstItem="41B-4H-00d" firstAttribute="width" secondItem="M67-hx-YbA" secondAttribute="width" id="gyl-P8-qUn"/>
                                     <constraint firstItem="SC8-sK-TFP" firstAttribute="width" secondItem="M67-hx-YbA" secondAttribute="width" multiplier="0.14" id="iVK-Fz-IRp"/>
-                                    <constraint firstItem="SC8-sK-TFP" firstAttribute="top" secondItem="M67-hx-YbA" secondAttribute="top" id="lrz-aC-ZF0"/>
                                     <constraint firstItem="41B-4H-00d" firstAttribute="centerX" secondItem="M67-hx-YbA" secondAttribute="centerX" id="wcB-sm-pNU"/>
                                     <constraint firstItem="41B-4H-00d" firstAttribute="height" secondItem="M67-hx-YbA" secondAttribute="height" multiplier="0.95" id="xle-BP-T0l"/>
-                                    <constraint firstAttribute="trailing" secondItem="SC8-sK-TFP" secondAttribute="trailing" id="y1p-nR-INj"/>
                                     <constraint firstItem="roZ-aH-QYP" firstAttribute="width" secondItem="M67-hx-YbA" secondAttribute="width" multiplier="0.14" id="yRG-dI-Q8F"/>
                                 </constraints>
                             </view>
