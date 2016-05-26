@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ResultViewController: UIViewController {
     @IBOutlet weak var numberImageView: UIImageView!
@@ -22,22 +23,53 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initCardView()
+        initResultText()
         // Do any additional setup after loading the view.
     }
 
     //画像の用意
     func initCardView(){
         let cardNum = 0//初期値0にしとく
+        
         let numImage:UIImage? = UIImage(named:"num_\(cardNum)")//数字札のイメージ読み込み
-        numberImageView.image = numImage//数字譜だのイメージに貼り付け
+        numberImageView.image = numImage//数字札のイメージに貼り付け
         //numberImageView.contentMode = UIViewContentMode.TopRight//位置合わせ
        /* numberImageView.contentMode = UIViewContentMode.ScaleAspectFill */
-        numberImageView.layer.shadowColor =  UIColor.blackColor().CGColor
-        numberImageView.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
-        numberImageView.layer.shadowOpacity = 0.4 /* 透明度 */
-        numberImageView.layer.shadowRadius = 5.0 /* 影の距離 */
-
+        initViewShadow(numberImageView)
         
+        let nameImage:UIImage? = UIImage(named:"name_u_\(cardNum)")
+        nameImageView.image = nameImage
+        initViewShadow(nameImageView)
+        
+        let faceImage:UIImage? = UIImage(named:"face\(cardNum)")
+        faceImageView.image = faceImage
+        initViewShadow(faceImageView)
+    }
+    
+    //キャプションの用意
+    func initResultText(){
+        let cardNum = 12
+        
+        let path = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
+        let arr = NSArray(contentsOfFile: path!)
+        var caption = ""
+        
+        if let text = arr![cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
+            caption = text
+        }
+        
+        print("caaaan = \(caption)")
+        resultTextView.text = caption
+        initViewShadow(resultTextView)
+        
+    }
+    
+    func initViewShadow(view :UIView) -> (UIView) {/*基本のドロップシャドウ設定*/
+        view.layer.shadowColor =  UIColor.blackColor().CGColor
+        view.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        view.layer.shadowOpacity = 0.4 /* 透明度 */
+        view.layer.shadowRadius = 5.0 /* 影の距離 */
+        return view
     }
     
     override func didReceiveMemoryWarning() {

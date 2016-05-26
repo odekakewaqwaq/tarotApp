@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		85C5F0E01CF6689000B409A3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */; };
-		85C5F0E21CF6B6E300B409A3 /* 2015026.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C5F0E11CF6B6E300B409A3 /* 2015026.plist */; };
+		85C5F0E81CF6EF0600B409A3 /* TarotData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C5F0E71CF6EF0600B409A3 /* TarotData.plist */; };
 		85F44A531CF64436003E372E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A521CF64436003E372E /* AppDelegate.swift */; };
 		85F44A551CF64436003E372E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A541CF64436003E372E /* ViewController.swift */; };
 		85F44A581CF64436003E372E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A561CF64436003E372E /* Main.storyboard */; };
@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		85C5F0E11CF6B6E300B409A3 /* 2015026.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 2015026.plist; sourceTree = "<group>"; };
+		85C5F0E71CF6EF0600B409A3 /* TarotData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TarotData.plist; sourceTree = "<group>"; };
 		85F44A4F1CF64436003E372E /* tarotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F44A521CF64436003E372E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F44A541CF64436003E372E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		85F44A511CF64436003E372E /* tarotApp */ = {
 			isa = PBXGroup;
 			children = (
-				85C5F0E11CF6B6E300B409A3 /* 2015026.plist */,
+				85C5F0E71CF6EF0600B409A3 /* TarotData.plist */,
 				85F44A521CF64436003E372E /* AppDelegate.swift */,
 				85F44A641CF65E7B003E372E /* mocmoc.jpg */,
 				85F44A541CF64436003E372E /* ViewController.swift */,
@@ -135,8 +135,8 @@
 				85F44A5D1CF64436003E372E /* LaunchScreen.storyboard in Resources */,
 				85F44A5A1CF64436003E372E /* Assets.xcassets in Resources */,
 				85F44A581CF64436003E372E /* Main.storyboard in Resources */,
+				85C5F0E81CF6EF0600B409A3 /* TarotData.plist in Resources */,
 				85F44A651CF65E7B003E372E /* mocmoc.jpg in Resources */,
-				85C5F0E21CF6B6E300B409A3 /* 2015026.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
