@@ -58,14 +58,20 @@
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jm-ug-lTk" userLabel="bottomSpacer">
                                 <rect key="frame" x="0.0" y="500" width="320" height="68"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHe-jQ-lSG">
-                                        <rect key="frame" x="57" y="19" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-Nv-yAI">
                                         <rect key="frame" x="222" y="19" width="46" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="forwardbutton:" destination="nAk-h2-rcP" eventType="touchUpInside" id="uWi-Xz-OOW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHe-jQ-lSG">
+                                        <rect key="frame" x="57" y="19" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="nAk-h2-rcP" eventType="touchUpInside" id="ONF-WM-4Wf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -115,6 +121,7 @@
                         <outlet property="faceImageView" destination="41B-4H-00d" id="bfj-nk-JY1"/>
                         <outlet property="nameImageView" destination="roZ-aH-QYP" id="44r-OT-kZr"/>
                         <outlet property="numberImageView" destination="SC8-sK-TFP" id="qgc-re-WnS"/>
+                        <outlet property="resultTextView" destination="61v-FE-ub0" id="M13-wB-7fG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4oF-Cf-4FN" userLabel="First Responder" sceneMemberID="firstResponder"/>
