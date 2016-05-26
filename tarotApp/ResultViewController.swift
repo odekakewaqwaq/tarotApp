@@ -13,11 +13,6 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var nameImageView: UIImageView!
     @IBOutlet weak var faceImageView: UIImageView!
     @IBOutlet weak var resultTextView: UITextView!
-    
-    @IBAction func back(sender: AnyObject) {
-    }
-    @IBAction func forward(sender: AnyObject) {
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +20,17 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    //番号のラベルの初期化
+    func initNumberImageView(){
+    }
+    
+    //名前のラベルの初期化
+    func initNameImageView(){
+    }
+    
+    func initFaceImageView(){
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
