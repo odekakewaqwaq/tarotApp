@@ -36,7 +36,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name_r_13" translatesAutoresizingMaskIntoConstraints="NO" id="roZ-aH-QYP">
                                         <rect key="frame" x="0.0" y="0.0" width="38" height="301"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="num_10" translatesAutoresizingMaskIntoConstraints="NO" id="SC8-sK-TFP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="num_10" translatesAutoresizingMaskIntoConstraints="NO" id="SC8-sK-TFP">
                                         <rect key="frame" x="234" y="0.0" width="38" height="301"/>
                                     </imageView>
                                 </subviews>
@@ -48,9 +48,11 @@
                                     <constraint firstItem="roZ-aH-QYP" firstAttribute="leading" secondItem="M67-hx-YbA" secondAttribute="leading" id="amv-6q-Ecy"/>
                                     <constraint firstItem="41B-4H-00d" firstAttribute="width" secondItem="M67-hx-YbA" secondAttribute="width" id="gyl-P8-qUn"/>
                                     <constraint firstItem="SC8-sK-TFP" firstAttribute="width" secondItem="M67-hx-YbA" secondAttribute="width" multiplier="0.14" id="iVK-Fz-IRp"/>
+                                    <constraint firstItem="SC8-sK-TFP" firstAttribute="top" secondItem="M67-hx-YbA" secondAttribute="top" id="nbh-3s-Ek6"/>
                                     <constraint firstItem="41B-4H-00d" firstAttribute="centerX" secondItem="M67-hx-YbA" secondAttribute="centerX" id="wcB-sm-pNU"/>
                                     <constraint firstItem="41B-4H-00d" firstAttribute="height" secondItem="M67-hx-YbA" secondAttribute="height" multiplier="0.95" id="xle-BP-T0l"/>
                                     <constraint firstItem="roZ-aH-QYP" firstAttribute="width" secondItem="M67-hx-YbA" secondAttribute="width" multiplier="0.14" id="yRG-dI-Q8F"/>
+                                    <constraint firstAttribute="trailing" secondItem="SC8-sK-TFP" secondAttribute="trailing" id="zRH-5T-yT9"/>
                                 </constraints>
                             </view>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jm-ug-lTk" userLabel="bottomSpacer">
@@ -132,8 +134,8 @@
     <resources>
         <image name="face0" width="707" height="1339"/>
         <image name="mocmoc.jpg" width="640" height="1136"/>
-        <image name="name_r_13" width="150" height="659"/>
-        <image name="num_10" width="137" height="396"/>
+        <image name="name_r_13" width="106" height="818"/>
+        <image name="num_10" width="106" height="818"/>
         <image name="resultBackground" width="640" height="1136"/>
     </resources>
 </document>

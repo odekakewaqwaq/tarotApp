@@ -22,23 +22,19 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initCardView()
+        initCardView(12,cardPos: 0)
         initResultText()
         // Do any additional setup after loading the view.
     }
 
     //画像の用意
-    func initCardView(){
-        let cardNum = 0//初期値0にしとく
+    func initCardView( cardNum: Int, cardPos:Int ){
         
         let numImage:UIImage? = UIImage(named:"num_\(cardNum)")//数字札のイメージ読み込み
         numberImageView.image = numImage//数字札のイメージに貼り付け
-        //numberImageView.contentMode = UIViewContentMode.TopRight//位置合わせ
-       /* numberImageView.contentMode = UIViewContentMode.ScaleAspectFill */
         initViewShadow(numberImageView)
         
         let nameImage:UIImage? = UIImage(named:"name_u_\(cardNum)")
-        nameImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200.0)
         nameImageView.image = nameImage
         initViewShadow(nameImageView)
         
