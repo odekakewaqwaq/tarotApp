@@ -15,6 +15,8 @@
 		85F44A5A1CF64436003E372E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A591CF64436003E372E /* Assets.xcassets */; };
 		85F44A5D1CF64436003E372E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A5B1CF64436003E372E /* LaunchScreen.storyboard */; };
 		85F44A651CF65E7B003E372E /* mocmoc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A641CF65E7B003E372E /* mocmoc.jpg */; };
+		85FF02A41CF7FDBD008329CC /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FF02A31CF7FDBD008329CC /* CollectionViewController.swift */; };
+		85FF02A61CF81470008329CC /* コレクションビュー6S横合わせ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85FF02A51CF81470008329CC /* コレクションビュー6S横合わせ.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		85F44A5C1CF64436003E372E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85F44A5E1CF64436003E372E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85F44A641CF65E7B003E372E /* mocmoc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mocmoc.jpg; sourceTree = "<group>"; };
+		85FF02A31CF7FDBD008329CC /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		85FF02A51CF81470008329CC /* コレクションビュー6S横合わせ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "コレクションビュー6S横合わせ.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +64,13 @@
 		85F44A511CF64436003E372E /* tarotApp */ = {
 			isa = PBXGroup;
 			children = (
+				85FF02A51CF81470008329CC /* コレクションビュー6S横合わせ.jpg */,
 				85C5F0E71CF6EF0600B409A3 /* TarotData.plist */,
 				85F44A521CF64436003E372E /* AppDelegate.swift */,
 				85F44A641CF65E7B003E372E /* mocmoc.jpg */,
 				85F44A541CF64436003E372E /* ViewController.swift */,
 				85F44A561CF64436003E372E /* Main.storyboard */,
+				85FF02A31CF7FDBD008329CC /* CollectionViewController.swift */,
 				85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */,
 				85F44A591CF64436003E372E /* Assets.xcassets */,
 				85F44A5B1CF64436003E372E /* LaunchScreen.storyboard */,
@@ -137,6 +143,7 @@
 				85F44A581CF64436003E372E /* Main.storyboard in Resources */,
 				85C5F0E81CF6EF0600B409A3 /* TarotData.plist in Resources */,
 				85F44A651CF65E7B003E372E /* mocmoc.jpg in Resources */,
+				85FF02A61CF81470008329CC /* コレクションビュー6S横合わせ.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85FF02A41CF7FDBD008329CC /* CollectionViewController.swift in Sources */,
 				85F44A551CF64436003E372E /* ViewController.swift in Sources */,
 				85F44A531CF64436003E372E /* AppDelegate.swift in Sources */,
 				85C5F0E01CF6689000B409A3 /* ResultViewController.swift in Sources */,

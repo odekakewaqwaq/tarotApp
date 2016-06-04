@@ -19,8 +19,8 @@ class ResultViewController: UIViewController {
     }
     @IBAction func forwardbutton(sender: AnyObject) {
     }
-
-    override func viewDidLoad() {
+    
+   override func viewDidLoad() {
         super.viewDidLoad()
         initCardView(12,cardPos: 0)
         initResultText()
