@@ -14,6 +14,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var nameImageView: UIImageView!
     @IBOutlet weak var faceImageView: UIImageView!
+    var CardNum = Int(arc4random_uniform(22))
+    var position = 0
     
     @IBAction func backButton(sender: AnyObject) {
     }
@@ -22,11 +24,15 @@ class ResultViewController: UIViewController {
     
    override func viewDidLoad() {
         super.viewDidLoad()
-        initCardView(12,cardPos: 0)
-        initResultText()
+        initCardView(self.CardNum,cardPos: 0)
+        initResultText(self.CardNum)
         // Do any additional setup after loading the view.
     }
 
+    func initCardNumber(){
+        
+    }
+    
     //画像の用意
     func initCardView( cardNum: Int, cardPos:Int ){
         
@@ -45,8 +51,7 @@ class ResultViewController: UIViewController {
     }
     
     //キャプションの用意
-    func initResultText(){
-        let cardNum = 12
+    func initResultText(cardNum: Int){
         
         let path = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
         let arr = NSArray(contentsOfFile: path!)
