@@ -15,7 +15,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var nameImageView: UIImageView!
     @IBOutlet weak var faceImageView: UIImageView!
     var CardNum = Int(arc4random_uniform(22))
-    var position = 0
+    var reversed :Bool = false
     
     @IBAction func backButton(sender: AnyObject) {
     }
@@ -47,6 +47,11 @@ class ResultViewController: UIViewController {
         
         let faceImage:UIImage? = UIImage(named:"face\(cardNum)")
         faceImageView.image = faceImage
+        reversed = (arc4random_uniform(2) != 0)
+        if reversed == true{
+            faceImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+        }
+
         initViewShadow(faceImageView)
     }
     
