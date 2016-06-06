@@ -185,9 +185,6 @@
                                             <constraint firstItem="Ap8-SY-KDF" firstAttribute="width" secondItem="QMU-wb-fXY" secondAttribute="width" id="sQo-Qd-66r"/>
                                             <constraint firstItem="Hc3-MO-mPe" firstAttribute="centerY" secondItem="QMU-wb-fXY" secondAttribute="centerY" id="tDJ-I2-grc"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="sCX-Yt-O1D" kind="modal" identifier="toCaptionViewController" id="GCQ-2x-OfC"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -212,6 +209,10 @@
                             <constraint firstItem="C4p-nB-y8A" firstAttribute="centerX" secondItem="BLo-IQ-gQt" secondAttribute="centerX" id="x8U-aL-iGb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="40I-Ej-ij2" kind="modal" identifier="toTestViewController" id="bA3-Rv-EQ3"/>
+                        <segue destination="sCX-Yt-O1D" kind="modal" identifier="toCaptionViewController" id="CTh-1w-BQZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhL-vf-ZK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,6 +261,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jn9-Hb-WgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="508" y="962"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="22n-2p-27r">
+            <objects>
+                <viewController id="40I-Ej-ij2" customClass="TestViewController" customModule="tarotApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1UG-Ct-M88"/>
+                        <viewControllerLayoutGuide type="bottom" id="hPM-XG-GKH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o6F-of-XVP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbH-WW-KPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="1605"/>
         </scene>
     </scenes>
     <resources>
