@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8505650B1D03ABA500395B40 /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505650A1D03ABA500395B40 /* CaptionViewController.swift */; };
-		8505652F1D05AB1800395B40 /* TestViewController.temp_caseinsensitive_rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505652E1D05AB1800395B40 /* TestViewController.temp_caseinsensitive_rename.swift */; };
 		85C5F0E01CF6689000B409A3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */; };
 		85C5F0E81CF6EF0600B409A3 /* TarotData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C5F0E71CF6EF0600B409A3 /* TarotData.plist */; };
 		85F44A531CF64436003E372E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A521CF64436003E372E /* AppDelegate.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		8505650A1D03ABA500395B40 /* CaptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
-		8505652E1D05AB1800395B40 /* TestViewController.temp_caseinsensitive_rename.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.temp_caseinsensitive_rename.swift; sourceTree = "<group>"; };
 		85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		85C5F0E71CF6EF0600B409A3 /* TarotData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TarotData.plist; sourceTree = "<group>"; };
 		85F44A4F1CF64436003E372E /* tarotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +72,6 @@
 				85F44A641CF65E7B003E372E /* mocmoc.jpg */,
 				85F44A541CF64436003E372E /* ViewController.swift */,
 				85F44A561CF64436003E372E /* Main.storyboard */,
-				8505652E1D05AB1800395B40 /* TestViewController.temp_caseinsensitive_rename.swift */,
 				8505650A1D03ABA500395B40 /* CaptionViewController.swift */,
 				85FF02A31CF7FDBD008329CC /* CollectionViewController.swift */,
 				85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */,
@@ -160,7 +157,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8505652F1D05AB1800395B40 /* TestViewController.temp_caseinsensitive_rename.swift in Sources */,
 				85FF02A41CF7FDBD008329CC /* CollectionViewController.swift in Sources */,
 				85F44A551CF64436003E372E /* ViewController.swift in Sources */,
 				85F44A531CF64436003E372E /* AppDelegate.swift in Sources */,

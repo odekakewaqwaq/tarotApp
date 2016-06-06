@@ -14,8 +14,10 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var nameImageView: UIImageView!
     @IBOutlet weak var faceImageView: UIImageView!
+    @IBOutlet weak var cardSpacerView: UIView!
+    
     var CardNum = Int(arc4random_uniform(22))
-    var reversed :Bool = false
+    var reversed :Bool = (arc4random_uniform(2) != 0)
     
     @IBAction func backButton(sender: AnyObject) {
     }
@@ -38,21 +40,22 @@ class ResultViewController: UIViewController {
         
         let numImage:UIImage? = UIImage(named:"num_\(cardNum)")//数字札のイメージ読み込み
         numberImageView.image = numImage//数字札のイメージに貼り付け
-        initViewShadow(numberImageView)
         
-        let nameImage:UIImage? = UIImage(named:"name_u_\(cardNum)")
-        nameImageView.image = nameImage
-        initViewShadow(nameImageView)
-        
-        
-        let faceImage:UIImage? = UIImage(named:"face\(cardNum)")
-        faceImageView.image = faceImage
-        reversed = (arc4random_uniform(2) != 0)
+        let nameImage:UIImage?
         if reversed == true{
             faceImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+            nameImage = UIImage(named:"name_r_\(cardNum)")
+        }else{
+            nameImage = UIImage(named:"name_u_\(cardNum)")
         }
 
-        initViewShadow(faceImageView)
+        let faceImage:UIImage? = UIImage(named:"face\(cardNum)")
+        faceImageView.image = faceImage
+
+        nameImageView.image = nameImage
+        
+        //initViewShadow(faceImageView)
+        initViewShadow(cardSpacerView)
     }
     
     //キャプションの用意
