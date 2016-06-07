@@ -18,7 +18,10 @@ class ResultViewController: UIViewController {
     
     var CardNum = Int(arc4random_uniform(22))
     var reversed :Bool = (arc4random_uniform(2) != 0)
-    
+
+    var cardArray: NSArray = []
+    let plistPath = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
+
     @IBAction func backButton(sender: AnyObject) {
     }
     @IBAction func forwardbutton(sender: AnyObject) {
@@ -26,14 +29,19 @@ class ResultViewController: UIViewController {
     
    override func viewDidLoad() {
         super.viewDidLoad()
+        initCardArray()
+        recordCardNumber()
         initCardView(self.CardNum,cardPos: 0)
         initResultText(self.CardNum)
         // Do any additional setup after loading the view.
     }
 
-    func a (){}//辞書の呼び出し
+    func initCardArray(){//辞書の呼び出し
+        cardArray = NSArray(contentsOfFile: plistPath!)! //!のタイミングがよーわからん
+    }
     
     func recordCardNumber(){//引いた数を記録(あとで図鑑に使う)
+        cardArray[CardNum]["drewTimes"] += 1
         
     }
     
@@ -62,12 +70,9 @@ class ResultViewController: UIViewController {
     
     //キャプションの用意
     func initResultText(cardNum: Int){
-        
-        let plistPath = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
-        let cardArray = NSArray(contentsOfFile: plistPath!)
         var caption = ""
         
-        if let text = cardArray![cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
+        if let text = cardArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
             caption = text
         }
         testLabel.text = caption
