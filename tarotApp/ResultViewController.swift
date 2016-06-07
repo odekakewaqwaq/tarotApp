@@ -31,7 +31,9 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func initCardNumber(){
+    func a (){}//辞書の呼び出し
+    
+    func recordCardNumber(){//引いた数を記録(あとで図鑑に使う)
         
     }
     
@@ -61,11 +63,11 @@ class ResultViewController: UIViewController {
     //キャプションの用意
     func initResultText(cardNum: Int){
         
-        let path = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
-        let arr = NSArray(contentsOfFile: path!)
+        let plistPath = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
+        let cardArray = NSArray(contentsOfFile: plistPath!)
         var caption = ""
         
-        if let text = arr![cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
+        if let text = cardArray![cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
             caption = text
         }
         testLabel.text = caption
