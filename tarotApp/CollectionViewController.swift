@@ -90,19 +90,20 @@ class CollectionViewController: UIViewController ,UICollectionViewDataSource, UI
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         // [indexPath.row] から画像名を探し、UImage を設定
         selectedNum = indexPath.row
-        performSegueWithIdentifier("toCaptionViewController",sender: nil)
+        performSegueWithIdentifier("toCaptionView",sender: nil)
     }
     
     // Segue 準備
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "toCaptionViewController") {
+        if (segue.identifier == "toCaptionView") {
             let captionViewController : CaptionViewController = (segue.destinationViewController as? CaptionViewController)!
             // SubViewController のselectedImgに選択された画像を設定する
             captionViewController.cardNum = selectedNum
         }
     }
     
-    
+    @IBAction func backToCollectionView(segue: UIStoryboardSegue) {
+    }
     
     /*
     // Cell が選択された場合

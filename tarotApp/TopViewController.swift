@@ -21,6 +21,8 @@ class TopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backToTop(segue: UIStoryboardSegue) {
+    }
 
     /*
     // MARK: - Navigation

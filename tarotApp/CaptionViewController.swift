@@ -20,13 +20,13 @@ class CaptionViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         print("cardNum is \(cardNum)")
-        var str: String = "face"+String(cardNum)
+        let str: String = "face"+String(cardNum)
         print("Str=\(str)")
         label.text = str
         let image =  UIImage(named: str)
         imageView.image = image
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
