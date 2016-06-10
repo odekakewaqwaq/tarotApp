@@ -38,10 +38,13 @@ class ResultViewController: UIViewController {
 
     func initCardArray(){//辞書の呼び出し
         cardArray = NSArray(contentsOfFile: plistPath!)! //!のタイミングがよーわからん
+        //NSUserDefaultsに
+        //要素数22、0~21の配列つくる
+        //配列をNSUserDefaultsにレジスター
+        
     }
     
     func recordCardNumber(){//引いた数を記録(あとで図鑑に使う)
-        cardArray[CardNum]["drewTimes"] += 1
         
     }
     

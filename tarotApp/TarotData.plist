@@ -29,7 +29,7 @@
 金運:危機・清算
 健康:死と再生&quot;</string>
 		<key>drewTimes</key>
-		<string>0</string>
+		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>id</key>
@@ -58,7 +58,7 @@
 金運:危機・清算
 健康:死と再生&quot;</string>
 		<key>drewTimes</key>
-		<string>0</string>
+		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>id</key>
