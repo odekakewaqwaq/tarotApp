@@ -25,12 +25,13 @@ class TopViewController: UIViewController {
         for i in 0...21 {
             cardArray.append(0)
         }
-        print("CardArray is \(cardArray)")
-        
         let defaults = NSUserDefaults.standardUserDefaults()
         let dic = ["cardArray": cardArray]
         defaults.registerDefaults(dic)
         defaults.synchronize()
+        
+        var testArray = defaults.arrayForKey("cardArray")
+        print("FirstViewArray\(testArray)")
     }
     @IBAction func backToTop(segue: UIStoryboardSegue) {//戻ってくるセグエの設定
     }

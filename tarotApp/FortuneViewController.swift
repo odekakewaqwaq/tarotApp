@@ -17,10 +17,10 @@ class FortuneViewController: UIViewController {
     }
 
     func testCardArray(){//CardArrayのデバッグ用
-        let defaults = NSUserDefaults.standardUserDefaults()
+        /*let defaults = NSUserDefaults.standardUserDefaults()
         //var bestScore = userDefaults.integerForKey("BEST")
         let cardArray = defaults.arrayForKey("cardArray")
-        print("secondView \(cardArray)")
+        print("secondView \(cardArray)")*/
     }
     
     override func didReceiveMemoryWarning() {

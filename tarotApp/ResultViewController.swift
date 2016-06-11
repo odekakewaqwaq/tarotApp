@@ -33,7 +33,6 @@ class ResultViewController: UIViewController {
         recordCardNumber()
         initCardView(self.CardNum,cardPos: 0)
         initResultText(self.CardNum)
-        recordCardNumber()
     }
 
     func initCardArray(){//辞書の呼び出し
@@ -45,12 +44,10 @@ class ResultViewController: UIViewController {
         if var cardArray = defaults.arrayForKey("cardArray") as? Array<Int>{
             print("ResultViewCardArray \(cardArray)")
             cardArray[CardNum] += 1
+            //格納してねー！
+            defaults.setObject(cardArray, forKey: "cardArray")
             print("ResultViewCardArray(modified) \(cardArray)")
         }
-        
-        /*if let value3 = dictionary?.objectForKey("test")?.objectForKey("name") as? String {
-         print("value3 = \(value3)")
-         }*/
     }
     
     //画像の用意
