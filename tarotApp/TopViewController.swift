@@ -12,26 +12,28 @@ class TopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initCardArray()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backToTop(segue: UIStoryboardSegue) {
+    func initCardArray(){
+        //0が22個の行列つくる
+        var cardArray: [Int] = []
+        for i in 0...21 {
+            cardArray.append(0)
+        }
+        print("CardArray is \(cardArray)")
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let dic = ["cardArray": cardArray]
+        defaults.registerDefaults(dic)
+    }
+    @IBAction func backToTop(segue: UIStoryboardSegue) {//戻ってくるセグエの設定
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

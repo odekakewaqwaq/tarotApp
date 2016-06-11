@@ -12,10 +12,17 @@ class FortuneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        testCardArray()
         // Do any additional setup after loading the view.
     }
 
+    func testCardArray(){//CardArrayのデバッグ用
+        let defaults = NSUserDefaults.standardUserDefaults()
+        //var bestScore = userDefaults.integerForKey("BEST")
+        let cardArray = defaults.arrayForKey("cardArray")
+        print("secondView \(cardArray)")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
