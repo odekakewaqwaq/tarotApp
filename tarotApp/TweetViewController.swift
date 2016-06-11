@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import Accounts
+import Social
 
 class TweetViewController: UIViewController {
-
+    
+    var myComposeView : SLComposeViewController!
+    
+    @IBAction func tweetButton(sender: AnyObject) {
+        myComposeView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        myComposeView.setInitialText("Twitter Test from Swift")
+        
+        // myComposeViewの画面遷移.
+        self.presentViewController(myComposeView, animated: true, completion: nil)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
