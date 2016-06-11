@@ -11,7 +11,7 @@ import UIKit
 class CaptionViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
-    var cardNum = 10000
+    var cardNum : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class CaptionViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         print("cardNum is \(cardNum)")
-        let str: String = "face"+String(cardNum)
+        let str: String = "face_" + cardNum
         print("Str=\(str)")
         label.text = str
         let image =  UIImage(named: str)

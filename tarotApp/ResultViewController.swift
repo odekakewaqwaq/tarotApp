@@ -64,7 +64,7 @@ class ResultViewController: UIViewController {
             nameImage = UIImage(named:"name_u_\(cardNum)")
         }
 
-        let faceImage:UIImage? = UIImage(named:"face\(cardNum)")
+        let faceImage:UIImage? = UIImage(named:"face_\(cardNum)")
         faceImageView.image = faceImage
 
         nameImageView.image = nameImage
