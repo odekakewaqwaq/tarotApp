@@ -30,6 +30,7 @@ class TopViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         let dic = ["cardArray": cardArray]
         defaults.registerDefaults(dic)
+        defaults.synchronize()
     }
     @IBAction func backToTop(segue: UIStoryboardSegue) {//戻ってくるセグエの設定
     }

@@ -17,9 +17,9 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var cardSpacerView: UIView!
     
     var CardNum = Int(arc4random_uniform(22))
-    var reversed :Bool = (arc4random_uniform(2) != 0)
+    var reversed : Bool = (arc4random_uniform(2) != 0)
 
-    var cardArray: NSArray = []
+    var cardDataArray : NSArray = []
     let plistPath = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
 
     @IBAction func backButton(sender: AnyObject) {
@@ -33,19 +33,24 @@ class ResultViewController: UIViewController {
         recordCardNumber()
         initCardView(self.CardNum,cardPos: 0)
         initResultText(self.CardNum)
-        // Do any additional setup after loading the view.
+        recordCardNumber()
     }
 
     func initCardArray(){//辞書の呼び出し
-        cardArray = NSArray(contentsOfFile: plistPath!)! //!のタイミングがよーわからん
-        //NSUserDefaultsに
-        //要素数22、0~21の配列つくる
-        //配列をNSUserDefaultsにレジスター
-        
+        cardDataArray = NSArray(contentsOfFile: plistPath!)! //!のタイミングがよーわからん
     }
     
     func recordCardNumber(){//引いた数を記録(あとで図鑑に使う)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if var cardArray = defaults.arrayForKey("cardArray") as? Array<Int>{
+            print("ResultViewCardArray \(cardArray)")
+            cardArray[CardNum] += 1
+            print("ResultViewCardArray(modified) \(cardArray)")
+        }
         
+        /*if let value3 = dictionary?.objectForKey("test")?.objectForKey("name") as? String {
+         print("value3 = \(value3)")
+         }*/
     }
     
     //画像の用意
@@ -75,7 +80,7 @@ class ResultViewController: UIViewController {
     func initResultText(cardNum: Int){
         var caption = ""
         
-        if let text = cardArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
+        if let text = cardDataArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
             caption = text
         }
         testLabel.text = caption
