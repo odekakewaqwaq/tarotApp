@@ -53,7 +53,7 @@ class TopViewController: UIViewController {
     }
     
     func initLastTimeDrewAt(){//引いた時刻を記録
-        let date_a = calendar.dateWithEra(1, year: 1986, month: 8, day: 20, hour: 2, minute: 27, second: 0, nanosecond: 0)!
+        let date_a = calendar.dateWithEra(1, year: 2016, month: 4, day: 20, hour: 2, minute: 27, second: 0, nanosecond: 0)!
         let dic = ["lastTimeDrewAt" : date_a]
         defaults.registerDefaults(dic)
         defaults.synchronize()
@@ -65,8 +65,17 @@ class TopViewController: UIViewController {
     }
     
     func drawAnnotation(){
-        let date_b = defaults.objectForKey("lastTimeDrewAt") as? NSDate
-        print(date_b!)
+        let date_b = (defaults.objectForKey("lastTimeDrewAt") as? NSDate)!
+        print("Last time drew at \(date_b)")
+        let currentDate = NSDate()
+        print("Current date is \(currentDate)")
+        if calendar.isDate(date_b, inSameDayAsDate: currentDate){
+            print("もう引いた")
+        }else{
+            print("まだ引いてない")
+        }
+        
+        
     }
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {//戻ってくるセグエの設定
