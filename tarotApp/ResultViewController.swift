@@ -21,6 +21,8 @@ class ResultViewController: UIViewController {
 
     var cardDataArray : NSArray = []
     let plistPath = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let calendar = NSCalendar.currentCalendar()
 
     @IBAction func backButton(sender: AnyObject) {
     }
@@ -31,6 +33,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         initCardArray()
         recordCardNumber()
+        recordTimeDrawAt()
         initCardView(self.CardNum,cardPos: 0)
         initResultText(self.CardNum)
     }
@@ -39,20 +42,24 @@ class ResultViewController: UIViewController {
         cardDataArray = NSArray(contentsOfFile: plistPath!)! //!のタイミングがよーわからん
     }
     
+    
+    
     func recordCardNumber(){//引いた数を記録(あとで図鑑に使う)
-        let defaults = NSUserDefaults.standardUserDefaults()
         if var cardArray = defaults.arrayForKey("cardArray") as? Array<Int>{
             print("ResultViewCardArray \(cardArray)")
             cardArray[CardNum] += 1
-            //格納してねー！
             defaults.setObject(cardArray, forKey: "cardArray")
             print("ResultViewCardArray(modified) \(cardArray)")
         }
     }
     
-    //画像の用意
-    func initCardView( cardNum: Int, cardPos:Int ){
-        
+    func recordTimeDrawAt(){
+        let date = NSDate()
+        defaults.setObject(date, forKey: "lastTimeDrewAt")
+        defaults.synchronize()
+    }
+    
+    func initCardView( cardNum: Int, cardPos:Int ){//画像の用意
         let numImage:UIImage? = UIImage(named:"num_\(cardNum)")//数字札のイメージ読み込み
         numberImageView.image = numImage//数字札のイメージに貼り付け
         
@@ -73,8 +80,8 @@ class ResultViewController: UIViewController {
         initViewShadow(cardSpacerView)
     }
     
-    //キャプションの用意
-    func initResultText(cardNum: Int){
+
+    func initResultText(cardNum: Int){ //キャプションの用意
         var caption = ""
         
         if let text = cardDataArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
