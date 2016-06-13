@@ -186,6 +186,33 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WVJ-gA-nAN">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV8-DA-h2n">
+                                <rect key="frame" x="0.0" y="20" width="320" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="1XV-9y-dNL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ライフいくつ？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVG-4A-JnK">
+                                <rect key="frame" x="0.0" y="122" width="320" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="xpw-sG-qa4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あと何秒でひける？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWN-J3-jPv">
+                                <rect key="frame" x="0.0" y="222" width="320" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="1Zq-XV-DAq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCa-YC-aPW">
                                 <rect key="frame" x="145" y="347" width="30" height="30"/>
                                 <state key="normal" title="占う"/>
@@ -207,22 +234,65 @@
                                     <segue destination="vQ6-Tj-GAo" kind="modal" id="rsh-RW-K8L"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-Vp-Ech">
+                                <rect key="frame" x="42" y="470" width="236" height="72"/>
+                                <color key="backgroundColor" red="0.51777827739715576" green="0.83312618732452393" blue="0.99909055233001709" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.81000636930000003" green="0.93918441129999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ライフ増えるボタン">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="NyT-lC-R9u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-hO-dG4">
+                                <rect key="frame" x="20" y="347" width="84" height="80"/>
+                                <color key="backgroundColor" red="0.99484628438949585" green="0.75842911005020142" blue="0.50979256629943848" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="ライフリセット"/>
+                                <connections>
+                                    <action selector="resetLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="3IX-jB-hTT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QVG-4A-JnK" firstAttribute="top" secondItem="mV8-DA-h2n" secondAttribute="bottom" constant="18" id="0SC-bE-mp6"/>
                             <constraint firstItem="RPy-xm-Ugf" firstAttribute="top" secondItem="WVJ-gA-nAN" secondAttribute="bottom" id="2CF-qs-Wp3"/>
+                            <constraint firstItem="GCa-YC-aPW" firstAttribute="top" secondItem="mV8-DA-h2n" secondAttribute="bottom" constant="243" id="2Dj-nr-1MV"/>
+                            <constraint firstItem="QVG-4A-JnK" firstAttribute="trailing" secondItem="sWN-J3-jPv" secondAttribute="trailing" id="3CP-Fq-vRD"/>
                             <constraint firstItem="2qi-Dx-Npt" firstAttribute="top" secondItem="TNk-MP-Tm3" secondAttribute="bottom" constant="17" id="B0I-7i-jsB"/>
+                            <constraint firstItem="iS9-Vp-Ech" firstAttribute="leading" secondItem="fHU-HL-7Zc" secondAttribute="leadingMargin" constant="26" id="Cos-5t-Z1o"/>
+                            <constraint firstItem="sWN-J3-jPv" firstAttribute="centerX" secondItem="TNk-MP-Tm3" secondAttribute="centerX" id="DLg-BM-QFh"/>
                             <constraint firstAttribute="trailing" secondItem="WVJ-gA-nAN" secondAttribute="trailing" id="Eae-Qd-v84"/>
                             <constraint firstItem="GCa-YC-aPW" firstAttribute="centerX" secondItem="WVJ-gA-nAN" secondAttribute="centerX" id="FXX-CG-Ddx"/>
+                            <constraint firstItem="iS9-Vp-Ech" firstAttribute="centerX" secondItem="2qi-Dx-Npt" secondAttribute="centerX" id="HdG-F0-XUW"/>
+                            <constraint firstItem="QVG-4A-JnK" firstAttribute="leading" secondItem="sWN-J3-jPv" secondAttribute="leading" id="Ll1-Yy-EG6"/>
+                            <constraint firstItem="iS9-Vp-Ech" firstAttribute="top" secondItem="2qi-Dx-Npt" secondAttribute="bottom" constant="8" symbolic="YES" id="NeT-hS-1oG"/>
+                            <constraint firstItem="QVG-4A-JnK" firstAttribute="trailing" secondItem="mV8-DA-h2n" secondAttribute="trailing" id="P2h-H4-MKO"/>
                             <constraint firstItem="TNk-MP-Tm3" firstAttribute="top" secondItem="GCa-YC-aPW" secondAttribute="bottom" constant="8" symbolic="YES" id="Ptg-3J-VFE"/>
                             <constraint firstItem="WVJ-gA-nAN" firstAttribute="top" secondItem="hUx-Su-ng9" secondAttribute="bottom" id="SX2-FF-ltB"/>
+                            <constraint firstItem="mV8-DA-h2n" firstAttribute="leading" secondItem="WVJ-gA-nAN" secondAttribute="leading" id="TAe-mS-gKw"/>
+                            <constraint firstItem="QVG-4A-JnK" firstAttribute="leading" secondItem="mV8-DA-h2n" secondAttribute="leading" id="WOD-tq-3vY"/>
                             <constraint firstItem="TNk-MP-Tm3" firstAttribute="leading" secondItem="2qi-Dx-Npt" secondAttribute="leading" id="cL6-Tf-xsC"/>
+                            <constraint firstItem="EWj-hO-dG4" firstAttribute="leading" secondItem="fHU-HL-7Zc" secondAttribute="leadingMargin" constant="4" id="cRd-gh-TBL"/>
+                            <constraint firstItem="RPy-xm-Ugf" firstAttribute="top" secondItem="iS9-Vp-Ech" secondAttribute="bottom" constant="26" id="fVp-Gn-LPd"/>
                             <constraint firstItem="WVJ-gA-nAN" firstAttribute="leading" secondItem="fHU-HL-7Zc" secondAttribute="leading" id="flL-dJ-Nay"/>
+                            <constraint firstItem="sWN-J3-jPv" firstAttribute="top" secondItem="QVG-4A-JnK" secondAttribute="bottom" constant="16" id="g83-uF-irx"/>
+                            <constraint firstItem="EWj-hO-dG4" firstAttribute="top" secondItem="GCa-YC-aPW" secondAttribute="top" id="jAA-lX-oqR"/>
+                            <constraint firstItem="mV8-DA-h2n" firstAttribute="trailing" secondItem="WVJ-gA-nAN" secondAttribute="trailing" id="jTr-X6-GkQ"/>
                             <constraint firstItem="RPy-xm-Ugf" firstAttribute="top" secondItem="2qi-Dx-Npt" secondAttribute="bottom" constant="106" id="muP-FF-ND8"/>
+                            <constraint firstItem="TNk-MP-Tm3" firstAttribute="leading" secondItem="EWj-hO-dG4" secondAttribute="trailing" constant="41" id="sJh-7P-TlF"/>
+                            <constraint firstItem="iS9-Vp-Ech" firstAttribute="top" secondItem="EWj-hO-dG4" secondAttribute="bottom" constant="43" id="t2N-HP-wmW"/>
                             <constraint firstItem="GCa-YC-aPW" firstAttribute="leading" secondItem="TNk-MP-Tm3" secondAttribute="leading" id="uen-ZW-nBH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qF0-zR-evk"/>
+                    <connections>
+                        <outlet property="testLabel" destination="mV8-DA-h2n" id="AP0-P1-Lmu"/>
+                        <outlet property="testLifeLabel" destination="QVG-4A-JnK" id="hlk-dH-Vig"/>
+                        <outlet property="testRemainSecondLabel" destination="sWN-J3-jPv" id="uVc-UC-Pzs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYb-er-OP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,6 +586,6 @@
         <image name="コレクションビュー6S横合わせ.jpg" width="1244" height="2208"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2yK-Vm-a1n"/>
+        <segue reference="fcy-e2-To3"/>
     </inferredMetricsTieBreakers>
 </document>

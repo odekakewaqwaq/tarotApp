@@ -13,6 +13,28 @@ class TopViewController: UIViewController {
     let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
     let defaults = NSUserDefaults.standardUserDefaults()
     
+    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var testLifeLabel: UILabel!
+    @IBOutlet weak var testRemainSecondLabel: UILabel!
+    @IBAction func addLifeButton(sender: AnyObject) {
+        var life = defaults.integerForKey("lifePoint")
+        life += 1
+        defaults.setInteger(life, forKey: "lifePoint")
+        defaults.synchronize()
+        print("Life is \(defaults.integerForKey("lifePoint"))")
+        testLifeLabel.text = "残りライフ　\(defaults.integerForKey("lifePoint"))"
+    }
+    @IBAction func resetLifeButton(sender: AnyObject) {
+        var life = defaults.integerForKey("lifePoint")
+        life = 0
+        defaults.setInteger(life, forKey: "lifePoint")
+        defaults.synchronize()
+        print("Life is \(defaults.integerForKey("lifePoint"))")
+        testLifeLabel.text = "残りライフ　\(defaults.integerForKey("lifePoint"))"
+    }
+
+    
+    
     override func viewDidLoad() {
         let calendar = NSCalendar.currentCalendar()
         let date = NSDate()
@@ -24,14 +46,15 @@ class TopViewController: UIViewController {
         initLastTimeDrewAt()
         checkLifePoint()
         drawAnnotation()
+        calcTime()
+        var time = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "calcTime", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        didReceiveMemoryWarning()
     }
     
-    func initCardArray(){
-        //0が22個の行列つくる
+    func initCardArray(){//0が22個の行列つくる
         var cardArray: [Int] = []
         for i in 0...21 {
             cardArray.append(0)
@@ -71,10 +94,25 @@ class TopViewController: UIViewController {
         print("Current date is \(currentDate)")
         if calendar.isDate(date_b, inSameDayAsDate: currentDate){
             print("もう引いた")
+            testLabel.text = "もう引いた"
         }else{
             print("まだ引いてない")
+            testLabel.text = "まだ引いてない"
         }
+    }
+    
+    func calcTime(){
+        let twentyFourHoursAfter = calendar.dateByAddingUnit(.Day, value: 1, toDate: NSDate(),options: [])!
+        let tomorrowDate = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: twentyFourHoursAfter, options: [])!
         
+        let time = NSDate().timeIntervalSinceDate(tomorrowDate) // 現在時刻と開始時刻の差
+        let hh = Int(time / 3600)
+        let mm = Int((time - Double(hh * 3600)) / 60)
+        let ss = Int(time - Double(hh * 3600 + mm * 60))
+        let date_String = String(format: "%02d:%02d:%02d", hh, mm, ss)
+        
+        let time2 = abs(Int(time))
+        testRemainSecondLabel.text = "あと\(time2)秒"
         
     }
     
