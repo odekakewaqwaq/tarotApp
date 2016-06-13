@@ -47,7 +47,9 @@ class TopViewController: UIViewController {
         checkLifePoint()
         drawAnnotation()
         calcTime()
-        var time = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "calcTime", userInfo: nil, repeats: true)
+        judgeAnnotation()
+        let testTime = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "calcTime", userInfo: nil, repeats: true)
+        let annotationTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "judgeAnnotation", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -101,16 +103,36 @@ class TopViewController: UIViewController {
         }
     }
     
+    func judgeAnnotation(){
+        var lifePoint = defaults.integerForKey("lifePoint")
+        let lastTimeDrewAt = (defaults.objectForKey("lastTimeDrewAt") as? NSDate)!
+        let currentDate = NSDate()
+        
+        if calendar.isDate(lastTimeDrewAt, inSameDayAsDate: currentDate){
+            //print("もう引いた")
+        }else{
+            lifePoint += 1
+            //print("まだ引いてない")
+        }
+        
+        if lifePoint > 0{
+            testLabel.text = "今日はあと\(lifePoint)回引けます"
+            //今日はあとn回引ける
+        }else{
+            let twentyFourHoursAfter = calendar.dateByAddingUnit(.Day, value: 1, toDate: NSDate(),options: [])!
+            let tomorrowDate = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: twentyFourHoursAfter, options: [])!
+            
+            let time = NSDate().timeIntervalSinceDate(tomorrowDate) // 現在時刻と開始時刻の差
+            let time2 = abs(Int(time))
+            testLabel.text = "あと\(time2)秒で引けます"
+        }
+    }
+    
     func calcTime(){
         let twentyFourHoursAfter = calendar.dateByAddingUnit(.Day, value: 1, toDate: NSDate(),options: [])!
         let tomorrowDate = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: twentyFourHoursAfter, options: [])!
         
         let time = NSDate().timeIntervalSinceDate(tomorrowDate) // 現在時刻と開始時刻の差
-        let hh = Int(time / 3600)
-        let mm = Int((time - Double(hh * 3600)) / 60)
-        let ss = Int(time - Double(hh * 3600 + mm * 60))
-        let date_String = String(format: "%02d:%02d:%02d", hh, mm, ss)
-        
         let time2 = abs(Int(time))
         testRemainSecondLabel.text = "あと\(time2)秒"
         

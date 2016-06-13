@@ -34,6 +34,7 @@ class ResultViewController: UIViewController {
         initCardArray()
         recordCardNumber()
         recordTimeDrawAt()
+        recordLifePoint()
         initCardView(self.CardNum,cardPos: 0)
         initResultText(self.CardNum)
     }
@@ -57,6 +58,12 @@ class ResultViewController: UIViewController {
         let date = NSDate()
         defaults.setObject(date, forKey: "lastTimeDrewAt")
         defaults.synchronize()
+    }
+    
+    func recordLifePoint(){
+        var lifePoint = defaults.integerForKey("lifePoint")
+        lifePoint -= 1
+        defaults.setInteger(lifePoint, forKey: "lifePoint")
     }
     
     func initCardView( cardNum: Int, cardPos:Int ){//画像の用意
