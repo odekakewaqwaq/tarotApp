@@ -44,8 +44,6 @@ class TopViewController: UIViewController {
         initCardArray()
         initLifePoint()
         initLastTimeDrewAt()
-        checkLifePoint()
-        drawAnnotation()
         calcTime()
         judgeAnnotation()
         let testTime = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "calcTime", userInfo: nil, repeats: true)
@@ -82,25 +80,6 @@ class TopViewController: UIViewController {
         let dic = ["lastTimeDrewAt" : date_a]
         defaults.registerDefaults(dic)
         defaults.synchronize()
-    }
-    
-    func checkLifePoint(){
-        let lifePoint = defaults.integerForKey("lifePoint")
-        print("LifePoint is \(lifePoint)")
-    }
-    
-    func drawAnnotation(){
-        let date_b = (defaults.objectForKey("lastTimeDrewAt") as? NSDate)!
-        print("Last time drew at \(date_b)")
-        let currentDate = NSDate()
-        print("Current date is \(currentDate)")
-        if calendar.isDate(date_b, inSameDayAsDate: currentDate){
-            print("もう引いた")
-            testLabel.text = "もう引いた"
-        }else{
-            print("まだ引いてない")
-            testLabel.text = "まだ引いてない"
-        }
     }
     
     func judgeAnnotation(){

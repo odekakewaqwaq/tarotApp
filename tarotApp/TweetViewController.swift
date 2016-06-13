@@ -11,13 +11,25 @@ import Accounts
 import Social
 
 class TweetViewController: UIViewController {
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
     var myComposeView : SLComposeViewController!
     
     @IBAction func tweetButton(sender: AnyObject) {
         myComposeView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        myComposeView.setInitialText("Twitter Test from Swift")
-        
+        myComposeView.setInitialText("ソワカちゃん、いいよね…")
+        myComposeView.completionHandler = { (result:SLComposeViewControllerResult) -> Void in
+            switch result {
+            case SLComposeViewControllerResult.Done :
+                print ("成功")
+                var life = self.defaults.integerForKey("lifePoint")
+                life += 1
+                self.defaults.setInteger(life, forKey: "lifePoint")
+                self.defaults.synchronize()
+                print("Life is \(self.defaults.integerForKey("lifePoint"))")
+            case SLComposeViewControllerResult.Cancelled :
+                print ("キャンセル")
+            }
+        }
         // myComposeViewの画面遷移.
         self.presentViewController(myComposeView, animated: true, completion: nil)
         
