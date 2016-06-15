@@ -12,13 +12,25 @@ class CaptionViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     var cardNum : String = ""
+    var captionText : String = ""
+    let plistPath = NSBundle.mainBundle().pathForResource("caption", ofType: "plist")
+    let captionDic = ["":""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUIGesture()
-        initCaption()
+        initCaptionArray()
+        initCaptionLabel()
     }
     
+    func initCaptionArray(){//辞書の呼び出し
+        let captionDic = NSDictionary(contentsOfFile: plistPath!)
+        print(plistPath)
+        //        if let text = cardDataArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
+        self.captionText = (captionDic?.objectForKey("\(cardNum)")?.objectForKey("caption") as? String)!
+            print(captionText)
+    }
+
     func initUIGesture(){
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTap:")
         self.view.addGestureRecognizer(tapGesture)
@@ -35,7 +47,8 @@ class CaptionViewController: UIViewController {
         
     }
     
-    func initCaption(){
+    func initCaptionLabel(){
+        print("initialized label")
         label.hidden = true
     }
     
@@ -44,9 +57,9 @@ class CaptionViewController: UIViewController {
         print("cardNum is \(cardNum)")
         let str: String = "face_" + cardNum
         print("Str=\(str)")
-        label.text = str
         let image =  UIImage(named: str)
         imageView.image = image
+        label.text = captionText
     }
     
     func handleTap(sender: UITapGestureRecognizer){

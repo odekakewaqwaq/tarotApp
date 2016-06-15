@@ -1,285 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
+<dict>
+	<key>0</key>
 	<dict>
 		<key>number</key>
-		<string>
-0</string>
+		<string>0</string>
 		<key>caption</key>
-		<string>"新たな旅立ち、純粋無垢
+		<string>&quot;新たな旅立ち、純粋無垢
  持たない自由さを
  しばし味わってみては？
 【ひとこと】
-批判と通報は受け付けないよ"</string>
+批判と通報は受け付けないよ&quot;</string>
 	</dict>
+	<key>1</key>
 	<dict>
 		<key>number</key>
-		<string>
-1</string>
+		<string>1</string>
 		<key>caption</key>
-		<string>"計画し、始める
+		<string>&quot;計画し、始める
  意志と信念で進んでいく
  障害は創造性の呼び水
 【ひとこと】
 「大好きなパパ」から物語が始まるので
-1番のカードにしたよ"</string>
+1番のカードにしたよ&quot;</string>
 	</dict>
+	<key>2</key>
 	<dict>
 		<key>number</key>
-		<string>
-2</string>
+		<string>2</string>
 		<key>caption</key>
-		<string>"内面を洞察する
+		<string>&quot;内面を洞察する
  理性で仕組みを解き明かす
  安定と安らぎ
 【ひとこと】
 宗教に関わる女性のキャラといったら
-ナースIDEかなと思ったよ"</string>
+ナースIDEかなと思ったよ&quot;</string>
 	</dict>
+	<key>3</key>
 	<dict>
 		<key>number</key>
-		<string>
-3</string>
+		<string>3</string>
 		<key>caption</key>
-		<string>"豊穣と実り
+		<string>&quot;豊穣と実り
  物質的・精神的な満足感
  努力が実る時期
 【ひとこと】
 母性っぽいキャラがいなかったから
-人形にしといたよ"</string>
+人形にしといたよ&quot;</string>
 	</dict>
+	<key>4</key>
 	<dict>
 		<key>number</key>
-		<string>
-4</string>
+		<string>4</string>
 		<key>caption</key>
-		<string>"秩序・父性
+		<string>&quot;秩序・父性
  組織化と管理
  現実的に整理する
 【ひとこと】
 権力もってそうだから
-皇帝にしたよ"</string>
+皇帝にしたよ&quot;</string>
 	</dict>
+	<key>5</key>
 	<dict>
 		<key>number</key>
-		<string>
-5</string>
+		<string>5</string>
 		<key>caption</key>
-		<string>"組織の一員としての自分
+		<string>&quot;組織の一員としての自分
  知識や助言が得られる時
  ルールとの付き合い方
 【ひとこと】
-元教祖だし"</string>
+元教祖だし&quot;</string>
 	</dict>
+	<key>6</key>
 	<dict>
 		<key>number</key>
-		<string>
-6</string>
+		<string>6</string>
 		<key>caption</key>
-		<string>"結びつく時
+		<string>&quot;結びつく時
  引き寄せる力
  すでに得ているものには選択を
 【ひとこと】
 恋人っぽいのいなかったから
-バルドゾルからご出張願ったよ"</string>
+バルドゾルからご出張願ったよ&quot;</string>
 	</dict>
+	<key>7</key>
 	<dict>
 		<key>number</key>
-		<string>
-7</string>
+		<string>7</string>
 		<key>caption</key>
-		<string>"勝利・成功・強い意志
+		<string>&quot;勝利・成功・強い意志
  成し遂げる力
  自己を制御し乗り越える
 【ひとこと】
 ガンガン進んでく感じと
-虹の7色から7番目のカードにしたよ"</string>
+虹の7色から7番目のカードにしたよ&quot;</string>
 	</dict>
+	<key>8</key>
 	<dict>
 		<key>number</key>
-		<string>
-8</string>
+		<string>8</string>
 		<key>caption</key>
-		<string>"理性的な判断
+		<string>&quot;理性的な判断
  公正と平等
  バランスを大切に
 【ひとこと】
 凶暴な何かを抑える理性とか
-そういうのだよ"</string>
+そういうのだよ&quot;</string>
 	</dict>
+	<key>9</key>
 	<dict>
 		<key>number</key>
-		<string>
-9</string>
+		<string>9</string>
 		<key>caption</key>
-		<string>"自身の心の探究
+		<string>&quot;自身の心の探究
  深い考察
  一歩引いて考えてみる
 【ひとこと】
 手だけでメカ沢先生を表現した
-お気に入りのカードだよ"</string>
+お気に入りのカードだよ&quot;</string>
 	</dict>
+	<key>10</key>
 	<dict>
 		<key>number</key>
-		<string>
-10</string>
+		<string>10</string>
 		<key>caption</key>
-		<string>"転機・転換期
+		<string>&quot;転機・転換期
  チャンスの到来
  この機を逃さないで
 【ひとこと】
-転がってたよ"</string>
+転がってたよ&quot;</string>
 	</dict>
+	<key>11</key>
 	<dict>
 		<key>number</key>
-		<string>
-11</string>
+		<string>11</string>
 		<key>caption</key>
-		<string>"精神的な力
+		<string>&quot;精神的な力
  寛容・思いやり
  自らを奮い立たせる
 【ひとこと】
-正義とはむなしいものだよ"</string>
+正義とはむなしいものだよ&quot;</string>
 	</dict>
+	<key>12</key>
 	<dict>
 		<key>number</key>
-		<string>
-12</string>
+		<string>12</string>
 		<key>caption</key>
-		<string>"忍耐、自己犠牲、魂の成長
+		<string>&quot;忍耐、自己犠牲、魂の成長
  状況を進めるために
  受け入れたり耐えたり
 【ひとこと】
-手助けキャラだしよく吊るされるし"</string>
+手助けキャラだしよく吊るされるし&quot;</string>
 	</dict>
+	<key>13</key>
 	<dict>
 		<key>number</key>
-		<string>
-13</string>
+		<string>13</string>
 		<key>caption</key>
-		<string>"終わりと新たな始まりを意味する
+		<string>&quot;終わりと新たな始まりを意味する
  変化から逃げず
  新たな自分を始める機会かも
 【ひとこと】
-カルタリが鎌っぽかったよ"</string>
+カルタリが鎌っぽかったよ&quot;</string>
 	</dict>
+	<key>14</key>
 	<dict>
 		<key>number</key>
-		<string>
-14</string>
+		<string>14</string>
 		<key>caption</key>
-		<string>"物事のバランス
+		<string>&quot;物事のバランス
  中間点・中庸を行く
  心の平穏
 【ひとこと】
-黒瓜入れたかったんや…"</string>
+黒瓜入れたかったんや…&quot;</string>
 	</dict>
+	<key>15</key>
 	<dict>
 		<key>number</key>
-		<string>
-15</string>
+		<string>15</string>
 		<key>caption</key>
-		<string>"身動きの取れない状況
+		<string>&quot;身動きの取れない状況
  見せかけや思い込みでなく
  自分と周囲をよく見て
 【ひとこと】
 こいつもきっと悪魔召喚プログラムで
 呼び出されてるよ。
 二人のしもべを従えてるよ
-"</string>
+&quot;</string>
 	</dict>
+	<key>16</key>
 	<dict>
 		<key>number</key>
-		<string>
-16</string>
+		<string>16</string>
 		<key>caption</key>
-		<string>"予期せぬトラブル
+		<string>&quot;予期せぬトラブル
  避けることのできない危機
  衝撃と解放
 【ひとこと】
 最終的に滅ぶ感じが
-良いかなと思ったよ"</string>
+良いかなと思ったよ&quot;</string>
 	</dict>
+	<key>17</key>
 	<dict>
 		<key>number</key>
-		<string>
-17</string>
+		<string>17</string>
 		<key>caption</key>
-		<string>"希望と導き
+		<string>&quot;希望と導き
  内面への気づき
  道は開ける
 【ひとこと】
-星からヒトデの連想だよ"</string>
+星からヒトデの連想だよ&quot;</string>
 	</dict>
+	<key>18</key>
 	<dict>
 		<key>number</key>
-		<string>
-18</string>
+		<string>18</string>
 		<key>caption</key>
-		<string>"不安と恐怖
+		<string>&quot;不安と恐怖
  まずは落ち着いて
  目標と目的を再確認
 【ひとこと】
-月と犬と甲殻類だよ"</string>
+月と犬と甲殻類だよ&quot;</string>
 	</dict>
+	<key>19</key>
 	<dict>
 		<key>number</key>
-		<string>
-19</string>
+		<string>19</string>
 		<key>caption</key>
-		<string>"開放感・幸せな時間
+		<string>&quot;開放感・幸せな時間
  真実が明るみに出る
  迷いは手放して
 【ひとこと】
-太陽を虹で表現してみたよ"</string>
+太陽を虹で表現してみたよ&quot;</string>
 	</dict>
+	<key>20</key>
 	<dict>
 		<key>number</key>
-		<string>
-20</string>
+		<string>20</string>
 		<key>caption</key>
-		<string>"決断の時、区切りの時
+		<string>&quot;決断の時、区切りの時
  現実を直視して
  自分の責任で判断を
 【ひとこと】
 機械居士かく語りきの
-絵面が審判っぽかったよ"</string>
+絵面が審判っぽかったよ&quot;</string>
 	</dict>
+	<key>21</key>
 	<dict>
 		<key>number</key>
-		<string>
-21</string>
+		<string>21</string>
 		<key>caption</key>
-		<string>"完成、完結
+		<string>&quot;完成、完結
  望むものを手にできる
  手に入れたら分かちあおう
 【ひとこと】
-その他のキャラの大集合だよ"</string>
+その他のキャラの大集合だよ&quot;</string>
 	</dict>
+	<key>a</key>
 	<dict>
 		<key>number</key>
-		<string>
-a</string>
+		<string>a</string>
 		<key>caption</key>
-		<string>"菩提樹をイメージして
+		<string>&quot;菩提樹をイメージして
 タロットらしい対称性と
 緻密さを意識したデザインに
-仕上げました"</string>
+仕上げました&quot;</string>
 	</dict>
+	<key>b</key>
 	<dict>
 		<key>number</key>
-		<string>
-b</string>
+		<string>b</string>
 		<key>caption</key>
-		<string>"このアプリケーションは
+		<string>&quot;このアプリケーションは
 ネットアニメ「護法少女ソワカちゃん」の
 世界観をより深く味わうため
 nbngがタロットのイラストと
 プログラムを作成したものです
 楽しんでいただけると嬉しいです
 2016.6.25
-アウスラ学園文化祭"</string>
+アウスラ学園文化祭&quot;</string>
 	</dict>
-</array>
+</dict>
 </plist>
