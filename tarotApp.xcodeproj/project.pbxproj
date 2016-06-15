@@ -13,7 +13,7 @@
 		8571BC051D0AD1570010BB23 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571BC041D0AD1570010BB23 /* TweetViewController.swift */; };
 		85C5F0E01CF6689000B409A3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */; };
 		85C5F0E81CF6EF0600B409A3 /* TarotData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C5F0E71CF6EF0600B409A3 /* TarotData.plist */; };
-		85E98BB31D10B73D008F41CF /* caption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85E98BB21D10B73D008F41CF /* caption.plist */; };
+		85E98BB51D117231008F41CF /* caption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85E98BB41D117231008F41CF /* caption.plist */; };
 		85F44A531CF64436003E372E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A521CF64436003E372E /* AppDelegate.swift */; };
 		85F44A551CF64436003E372E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A541CF64436003E372E /* ViewController.swift */; };
 		85F44A581CF64436003E372E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F44A561CF64436003E372E /* Main.storyboard */; };
@@ -31,7 +31,7 @@
 		8571BC041D0AD1570010BB23 /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		85C5F0E71CF6EF0600B409A3 /* TarotData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TarotData.plist; sourceTree = "<group>"; };
-		85E98BB21D10B73D008F41CF /* caption.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = caption.plist; sourceTree = "<group>"; };
+		85E98BB41D117231008F41CF /* caption.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = caption.plist; sourceTree = "<group>"; };
 		85F44A4F1CF64436003E372E /* tarotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F44A521CF64436003E372E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F44A541CF64436003E372E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		85F44A511CF64436003E372E /* tarotApp */ = {
 			isa = PBXGroup;
 			children = (
-				85E98BB21D10B73D008F41CF /* caption.plist */,
+				85E98BB41D117231008F41CF /* caption.plist */,
 				85FF02A51CF81470008329CC /* コレクションビュー6S横合わせ.jpg */,
 				85C5F0E71CF6EF0600B409A3 /* TarotData.plist */,
 				85F44A521CF64436003E372E /* AppDelegate.swift */,
@@ -153,10 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E98BB51D117231008F41CF /* caption.plist in Resources */,
 				85F44A5D1CF64436003E372E /* LaunchScreen.storyboard in Resources */,
 				85F44A5A1CF64436003E372E /* Assets.xcassets in Resources */,
 				85F44A581CF64436003E372E /* Main.storyboard in Resources */,
-				85E98BB31D10B73D008F41CF /* caption.plist in Resources */,
 				85C5F0E81CF6EF0600B409A3 /* TarotData.plist in Resources */,
 				85F44A651CF65E7B003E372E /* mocmoc.jpg in Resources */,
 				85FF02A61CF81470008329CC /* コレクションビュー6S横合わせ.jpg in Resources */,
