@@ -90,7 +90,8 @@ class CollectionViewController: UIViewController ,UICollectionViewDataSource, UI
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let cellSize:CGFloat = collectionView.frame.size.width * 0.22
+        //let cellSize:CGFloat = collectionView.frame.size.width * 0.22
+        let cellSize:CGFloat = collectionView.frame.size.width * 0.2175
         // 正方形で返すためにwidth,heightを同じにする
         return CGSizeMake(cellSize, cellSize)
     }

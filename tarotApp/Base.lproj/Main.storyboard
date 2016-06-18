@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGround" translatesAutoresizingMaskIntoConstraints="NO" id="WMw-el-yMW">
-                                <rect key="frame" x="-160" y="-85" width="640" height="738"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uzumaki" translatesAutoresizingMaskIntoConstraints="NO" id="WMw-el-yMW">
+                                <rect key="frame" x="-240" y="-426" width="800" height="1420"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fortunemoc.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7ds-Xw-ang">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -56,7 +56,7 @@
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="leading" secondItem="pKM-MR-NJr" secondAttribute="trailing" id="6JX-Mh-bnr"/>
                             <constraint firstItem="R8L-N7-qa6" firstAttribute="top" secondItem="2to-xp-BvH" secondAttribute="bottom" constant="40" id="7KI-K6-KAN"/>
                             <constraint firstItem="rCx-o9-IeW" firstAttribute="centerX" secondItem="EaF-NB-l1L" secondAttribute="centerX" id="8LL-fD-Sl3"/>
-                            <constraint firstItem="WMw-el-yMW" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="1.3" id="9PB-Sx-rlc"/>
+                            <constraint firstItem="WMw-el-yMW" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="2.5" id="9PB-Sx-rlc"/>
                             <constraint firstItem="WMw-el-yMW" firstAttribute="centerX" secondItem="EaF-NB-l1L" secondAttribute="centerX" id="Bw5-m2-wZS"/>
                             <constraint firstItem="2to-xp-BvH" firstAttribute="leading" secondItem="EaF-NB-l1L" secondAttribute="leadingMargin" constant="80" id="Dd5-w3-A5v"/>
                             <constraint firstItem="7ds-Xw-ang" firstAttribute="leading" secondItem="WcP-r6-eRW" secondAttribute="leading" id="EB3-8I-bud"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="7ds-Xw-ang" firstAttribute="centerX" secondItem="2to-xp-BvH" secondAttribute="centerX" id="gpO-ed-0fw"/>
                             <constraint firstItem="rCx-o9-IeW" firstAttribute="top" secondItem="pKM-MR-NJr" secondAttribute="bottom" id="h7K-nM-esW"/>
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" id="hRl-qi-Lot"/>
-                            <constraint firstItem="WMw-el-yMW" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="2" id="hcu-H4-wjn"/>
+                            <constraint firstItem="WMw-el-yMW" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="2.5" id="hcu-H4-wjn"/>
                             <constraint firstItem="7ds-Xw-ang" firstAttribute="trailing" secondItem="WcP-r6-eRW" secondAttribute="trailing" id="jvI-Vc-l9g"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="top" secondItem="WcP-r6-eRW" secondAttribute="bottom" id="khk-UB-L8E"/>
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="0.8" id="lob-Rg-VHV"/>
@@ -471,7 +471,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コレクションビュー6S横合わせ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YQW-nO-1Eh">
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コレクションビュー6S横合わせ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YQW-nO-1Eh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-gN-EJY">
@@ -608,7 +608,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backGround" width="2612" height="2970"/>
         <image name="face0" width="707" height="1339"/>
         <image name="fortunemoc.jpg" width="1242" height="2208"/>
         <image name="guruguru" width="669" height="750"/>
@@ -621,6 +620,7 @@
         <image name="toNext" width="176" height="138"/>
         <image name="tweetButton" width="435" height="94"/>
         <image name="tweetviewmoc" width="1080" height="1920"/>
+        <image name="uzumaki" width="2500" height="2500"/>
         <image name="コレクションビュー6S横合わせ.jpg" width="1244" height="2208"/>
     </resources>
     <inferredMetricsTieBreakers>
