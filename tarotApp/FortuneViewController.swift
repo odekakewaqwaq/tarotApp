@@ -72,8 +72,7 @@ class FortuneViewController: UIViewController {
     }
     
     func rotateAnim() {
-        
-        UIView.animateWithDuration(2, animations: {
+        UIView.animateWithDuration(3, delay: 0, options: [.CurveLinear], animations: {
             let angle = CGFloat(M_PI * 1)
             self.backGroundView.transform = CGAffineTransformRotate(self.backGroundView.transform, angle)
             }, completion: { (flag) in
