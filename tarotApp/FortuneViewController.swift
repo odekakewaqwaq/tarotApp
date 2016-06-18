@@ -9,34 +9,53 @@
 import UIKit
 
 class FortuneViewController: UIViewController {
-
+    @IBOutlet weak var titleView: UIView!
+    var titleImageArray: Array<UIImage> = []
+    var titleViewArray: Array<UIImageView> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        testCardArray()
+        initTitleImageArray()
+        initTitleView()
+        
         // Do any additional setup after loading the view.
     }
-
-    func testCardArray(){//CardArrayのデバッグ用
-        /*let defaults = NSUserDefaults.standardUserDefaults()
-        //var bestScore = userDefaults.integerForKey("BEST")
-        let cardArray = defaults.arrayForKey("cardArray")
-        print("secondView \(cardArray)")*/
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        animateTitleView()
     }
+
+    func initTitleImageArray(){
+        for i in 0...5{
+            let image = UIImage(named:"char_\(i)")!
+            titleImageArray.append(image)
+        }
+    }
+    
+    func initTitleView(){
+        for i in 0 ..< titleImageArray.count{
+            let imageView = UIImageView()
+            imageView.image = titleImageArray[i]
+            imageView.frame.size = CGSizeMake(titleView.bounds.width, titleView.bounds.height)
+            imageView.contentMode = .ScaleAspectFit
+            titleViewArray.append(imageView)
+            titleView.addSubview(titleViewArray[i])
+        }
+    }
+    
+    func animateTitleView(){
+        UIView.animateWithDuration(0.5, delay: 0.1, options: .CurveEaseInOut , animations: {
+            () -> Void in
+            self.titleViewArray[1].center = CGPoint(x: 0, y: 100)
+            }
+            , completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

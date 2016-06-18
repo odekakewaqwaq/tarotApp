@@ -19,6 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fortunemoc.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7ds-Xw-ang">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2to-xp-BvH">
                                 <rect key="frame" x="96" y="410" width="129" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,34 +40,35 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gys-KJ-uhv" userLabel="TitleView">
-                                <rect key="frame" x="58" y="23" width="234" height="97"/>
+                                <rect key="frame" x="58" y="23" width="256" height="97"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fortunemoc.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7ds-Xw-ang">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="top" secondItem="EaF-NB-l1L" secondAttribute="top" id="3Y8-7Y-2y2"/>
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="leading" secondItem="pKM-MR-NJr" secondAttribute="trailing" id="6JX-Mh-bnr"/>
-                            <constraint firstItem="7ds-Xw-ang" firstAttribute="top" secondItem="EaF-NB-l1L" secondAttribute="top" id="6rh-gu-EkQ"/>
-                            <constraint firstItem="7ds-Xw-ang" firstAttribute="bottom" secondItem="R8L-N7-qa6" secondAttribute="top" id="AKb-0r-Dkl"/>
+                            <constraint firstItem="7ds-Xw-ang" firstAttribute="leading" secondItem="WcP-r6-eRW" secondAttribute="leading" id="EB3-8I-bud"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="0.2" id="Eca-LB-qq7"/>
-                            <constraint firstItem="7ds-Xw-ang" firstAttribute="centerX" secondItem="2to-xp-BvH" secondAttribute="centerX" id="JTQ-3x-oEm"/>
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="top" secondItem="WcP-r6-eRW" secondAttribute="bottom" id="L3t-v3-dZt"/>
+                            <constraint firstItem="7ds-Xw-ang" firstAttribute="bottom" secondItem="R8L-N7-qa6" secondAttribute="top" id="OPi-HY-TvT"/>
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="0.039" id="QdA-G9-d4C"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="leading" secondItem="EaF-NB-l1L" secondAttribute="leading" id="RpZ-Uv-zlE"/>
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="0.17" id="adV-Tf-1q2"/>
+                            <constraint firstItem="7ds-Xw-ang" firstAttribute="centerX" secondItem="2to-xp-BvH" secondAttribute="centerX" id="gpO-ed-0fw"/>
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" id="hRl-qi-Lot"/>
+                            <constraint firstItem="7ds-Xw-ang" firstAttribute="trailing" secondItem="WcP-r6-eRW" secondAttribute="trailing" id="jvI-Vc-l9g"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="top" secondItem="WcP-r6-eRW" secondAttribute="bottom" id="khk-UB-L8E"/>
-                            <constraint firstItem="Gys-KJ-uhv" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="0.73" id="lob-Rg-VHV"/>
+                            <constraint firstItem="Gys-KJ-uhv" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="0.8" id="lob-Rg-VHV"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="0.18" id="mB4-Aa-bpO"/>
-                            <constraint firstItem="7ds-Xw-ang" firstAttribute="leading" secondItem="EaF-NB-l1L" secondAttribute="leading" id="myC-xF-w20"/>
+                            <constraint firstItem="7ds-Xw-ang" firstAttribute="top" secondItem="WcP-r6-eRW" secondAttribute="top" id="snU-dk-Cgx"/>
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="centerX" secondItem="EaF-NB-l1L" secondAttribute="centerX" id="yTA-0n-rww"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FuS-GO-Tl1"/>
+                    <connections>
+                        <outlet property="titleView" destination="Gys-KJ-uhv" id="nAm-oE-efn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfR-tU-KyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
