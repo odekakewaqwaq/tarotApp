@@ -45,13 +45,15 @@ class FortuneViewController: UIViewController {
     }
     
     func animateTitleView(){
-        UIView.animateWithDuration(0.5, delay: 0.1, options: .CurveEaseInOut , animations: {
+        for (i,a) in titleViewArray.enumerate() {
+        let num = Double(i)
+        UIView.animateWithDuration(0.5, delay: 0.1 * num, options:[.Repeat, .Autoreverse] , animations: {
             () -> Void in
-            self.titleViewArray[1].center = CGPoint(x: 0, y: 100)
+            self.titleViewArray[i].center = CGPoint(x: 0, y: 100)
             }
             , completion: nil)
     }
-    
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
