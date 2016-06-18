@@ -19,18 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGround" translatesAutoresizingMaskIntoConstraints="NO" id="WMw-el-yMW">
+                                <rect key="frame" x="-160" y="-85" width="640" height="738"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fortunemoc.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7ds-Xw-ang">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2to-xp-BvH">
-                                <rect key="frame" x="96" y="410" width="129" height="30"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
-                                <state key="normal" title="ストップ"/>
-                                <connections>
-                                    <segue destination="nAk-h2-rcP" kind="modal" identifier="toResultView" id="813-VC-9JE"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcP-r6-eRW" userLabel="TopSpacerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -43,11 +37,28 @@
                                 <rect key="frame" x="58" y="23" width="256" height="97"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guruguru" translatesAutoresizingMaskIntoConstraints="NO" id="rCx-o9-IeW">
+                                <rect key="frame" x="77" y="137" width="166" height="199"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2to-xp-BvH">
+                                <rect key="frame" x="96" y="498" width="129" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                <state key="normal" title="ストップ"/>
+                                <connections>
+                                    <segue destination="nAk-h2-rcP" kind="modal" identifier="toResultView" id="813-VC-9JE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="top" secondItem="EaF-NB-l1L" secondAttribute="top" id="3Y8-7Y-2y2"/>
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="leading" secondItem="pKM-MR-NJr" secondAttribute="trailing" id="6JX-Mh-bnr"/>
+                            <constraint firstItem="R8L-N7-qa6" firstAttribute="top" secondItem="2to-xp-BvH" secondAttribute="bottom" constant="40" id="7KI-K6-KAN"/>
+                            <constraint firstItem="rCx-o9-IeW" firstAttribute="centerX" secondItem="EaF-NB-l1L" secondAttribute="centerX" id="8LL-fD-Sl3"/>
+                            <constraint firstItem="WMw-el-yMW" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="1.3" id="9PB-Sx-rlc"/>
+                            <constraint firstItem="WMw-el-yMW" firstAttribute="centerX" secondItem="EaF-NB-l1L" secondAttribute="centerX" id="Bw5-m2-wZS"/>
+                            <constraint firstItem="2to-xp-BvH" firstAttribute="leading" secondItem="EaF-NB-l1L" secondAttribute="leadingMargin" constant="80" id="Dd5-w3-A5v"/>
                             <constraint firstItem="7ds-Xw-ang" firstAttribute="leading" secondItem="WcP-r6-eRW" secondAttribute="leading" id="EB3-8I-bud"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="0.2" id="Eca-LB-qq7"/>
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="top" secondItem="WcP-r6-eRW" secondAttribute="bottom" id="L3t-v3-dZt"/>
@@ -55,18 +66,25 @@
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="0.039" id="QdA-G9-d4C"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="leading" secondItem="EaF-NB-l1L" secondAttribute="leading" id="RpZ-Uv-zlE"/>
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="0.17" id="adV-Tf-1q2"/>
+                            <constraint firstItem="rCx-o9-IeW" firstAttribute="height" secondItem="EaF-NB-l1L" secondAttribute="height" multiplier="0.35" id="atD-nG-RbE"/>
                             <constraint firstItem="7ds-Xw-ang" firstAttribute="centerX" secondItem="2to-xp-BvH" secondAttribute="centerX" id="gpO-ed-0fw"/>
+                            <constraint firstItem="rCx-o9-IeW" firstAttribute="top" secondItem="pKM-MR-NJr" secondAttribute="bottom" id="h7K-nM-esW"/>
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" id="hRl-qi-Lot"/>
+                            <constraint firstItem="WMw-el-yMW" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="2" id="hcu-H4-wjn"/>
                             <constraint firstItem="7ds-Xw-ang" firstAttribute="trailing" secondItem="WcP-r6-eRW" secondAttribute="trailing" id="jvI-Vc-l9g"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="top" secondItem="WcP-r6-eRW" secondAttribute="bottom" id="khk-UB-L8E"/>
                             <constraint firstItem="Gys-KJ-uhv" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="0.8" id="lob-Rg-VHV"/>
                             <constraint firstItem="pKM-MR-NJr" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="0.18" id="mB4-Aa-bpO"/>
+                            <constraint firstItem="WMw-el-yMW" firstAttribute="centerY" secondItem="EaF-NB-l1L" secondAttribute="centerY" id="owA-PO-p5H"/>
+                            <constraint firstItem="rCx-o9-IeW" firstAttribute="width" secondItem="EaF-NB-l1L" secondAttribute="width" multiplier="0.52" id="rtn-CV-UDk"/>
                             <constraint firstItem="7ds-Xw-ang" firstAttribute="top" secondItem="WcP-r6-eRW" secondAttribute="top" id="snU-dk-Cgx"/>
                             <constraint firstItem="WcP-r6-eRW" firstAttribute="centerX" secondItem="EaF-NB-l1L" secondAttribute="centerX" id="yTA-0n-rww"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FuS-GO-Tl1"/>
                     <connections>
+                        <outlet property="backGroundView" destination="WMw-el-yMW" id="Hbl-Dv-owJ"/>
+                        <outlet property="guruguruFaceView" destination="rCx-o9-IeW" id="F2Z-wu-aaD"/>
                         <outlet property="titleView" destination="Gys-KJ-uhv" id="nAm-oE-efn"/>
                     </connections>
                 </viewController>
@@ -590,8 +608,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backGround" width="2612" height="2970"/>
         <image name="face0" width="707" height="1339"/>
         <image name="fortunemoc.jpg" width="1242" height="2208"/>
+        <image name="guruguru" width="669" height="750"/>
         <image name="mocmoc.jpg" width="640" height="1136"/>
         <image name="name_r_13" width="106" height="818"/>
         <image name="num_10" width="106" height="818"/>
@@ -605,6 +625,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fcy-e2-To3"/>
-        <segue reference="NOm-YY-FLa"/>
+        <segue reference="3dX-CS-Vgq"/>
     </inferredMetricsTieBreakers>
 </document>
