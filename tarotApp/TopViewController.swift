@@ -16,6 +16,16 @@ class TopViewController: UIViewController {
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var testLifeLabel: UILabel!
     @IBOutlet weak var testRemainSecondLabel: UILabel!
+    
+    //秒数カウントダウン用スイッチ
+    @IBOutlet weak var imageView0: UIImageView!
+    @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
+    @IBOutlet weak var imageView4: UIImageView!
+    
+    
+    // デバッグ用ボタン
     @IBAction func addLifeButton(sender: AnyObject) {
         var life = defaults.integerForKey("lifePoint")
         life += 1
@@ -34,7 +44,7 @@ class TopViewController: UIViewController {
     }
 
     
-    
+    //ビューディドロード
     override func viewDidLoad() {
         let calendar = NSCalendar.currentCalendar()
         let date = NSDate()
@@ -103,7 +113,7 @@ class TopViewController: UIViewController {
             
             let time = NSDate().timeIntervalSinceDate(tomorrowDate) // 現在時刻と開始時刻の差
             let time2 = abs(Int(time))
-            testLabel.text = "あと\(time2)秒で引けます"
+            testLabel.text = "あと\(time2)秒で引けまぽよ"
         }
     }
     
