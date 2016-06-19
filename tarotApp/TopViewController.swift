@@ -24,6 +24,8 @@ class TopViewController: UIViewController {
     @IBOutlet weak var imageView3: UIImageView!
     @IBOutlet weak var imageView4: UIImageView!
     
+    var numImageArray: Array<UIImage> = []//カウントアップ・ダウン用配列
+    
     
     // デバッグ用ボタン
     @IBAction func addLifeButton(sender: AnyObject) {
@@ -43,8 +45,7 @@ class TopViewController: UIViewController {
         testLifeLabel.text = "残りライフ　\(defaults.integerForKey("lifePoint"))"
     }
 
-    
-    //ビューディドロード
+//ビューディドロード
     override func viewDidLoad() {
         let calendar = NSCalendar.currentCalendar()
         let date = NSDate()
@@ -54,14 +55,19 @@ class TopViewController: UIViewController {
         initCardArray()
         initLifePoint()
         initLastTimeDrewAt()
-        calcTime()
+        initNumImageArray()
         judgeAnnotation()
-        let testTime = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "calcTime", userInfo: nil, repeats: true)
         let annotationTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "judgeAnnotation", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
         didReceiveMemoryWarning()
+    }
+    
+    func initNumImageArray(){
+        for num in 0...9 {
+            numImageArray.append(UIImage(named:"timeNum_\(num)")!)
+        }
     }
     
     func initCardArray(){//0が22個の行列つくる
@@ -113,19 +119,27 @@ class TopViewController: UIViewController {
             
             let time = NSDate().timeIntervalSinceDate(tomorrowDate) // 現在時刻と開始時刻の差
             let time2 = abs(Int(time))
+            testNumImage(time2)
             testLabel.text = "あと\(time2)秒で引けまぽよ"
         }
     }
     
-    func calcTime(){
-        let twentyFourHoursAfter = calendar.dateByAddingUnit(.Day, value: 1, toDate: NSDate(),options: [])!
-        let tomorrowDate = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: twentyFourHoursAfter, options: [])!
+    func testNumImage(numInt : Int){
+        var numArray = Array(count: 5, repeatedValue:0)
+        numArray[0] = (numInt % 100000) / 10000
+        numArray[1] = (numInt % 10000) / 1000
+        numArray[2] = (numInt % 1000) / 100
+        numArray[3] = (numInt % 100) / 10
+        numArray[4] = (numInt % 10)
         
-        let time = NSDate().timeIntervalSinceDate(tomorrowDate) // 現在時刻と開始時刻の差
-        let time2 = abs(Int(time))
-        testRemainSecondLabel.text = "あと\(time2)秒"
+        imageView0.image = numImageArray[(numArray[0])]
+        imageView1.image = numImageArray[(numArray[1])]
+        imageView2.image = numImageArray[(numArray[2])]
+        imageView3.image = numImageArray[(numArray[3])]
+        imageView4.image = numImageArray[(numArray[4])]
         
     }
+    
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {//戻ってくるセグエの設定
     }
