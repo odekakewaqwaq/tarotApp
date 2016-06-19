@@ -287,18 +287,6 @@
                                     <action selector="addLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="NyT-lC-R9u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-hO-dG4">
-                                <rect key="frame" x="14" y="53" width="84" height="80"/>
-                                <color key="backgroundColor" red="0.99484628438949585" green="0.75842911005020142" blue="0.50979256629943848" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="a8P-wd-SDX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="ライフリセット"/>
-                                <connections>
-                                    <action selector="resetLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="3IX-jB-hTT"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-4B-yTm">
                                 <rect key="frame" x="0.0" y="534" width="320" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -335,7 +323,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="remainScondLabel" translatesAutoresizingMaskIntoConstraints="NO" id="gkr-Kh-W5s">
                                         <rect key="frame" x="0.0" y="0.0" width="292" height="142"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmy-Lf-Uod">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmy-Lf-Uod" userLabel="spacerLeftAtInfoView">
                                         <rect key="frame" x="0.0" y="0.0" width="15" height="142"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -375,6 +363,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kanja" translatesAutoresizingMaskIntoConstraints="NO" id="I9q-x4-G6b">
                                 <rect key="frame" x="192" y="270" width="128" height="125"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-hO-dG4">
+                                <rect key="frame" x="14" y="126" width="84" height="80"/>
+                                <color key="backgroundColor" red="0.99484628438949585" green="0.75842911005020142" blue="0.50979256629943848" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="a8P-wd-SDX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="ライフリセット"/>
+                                <connections>
+                                    <action selector="resetLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="3IX-jB-hTT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -417,16 +417,16 @@
                             <constraint firstItem="qc1-4B-yTm" firstAttribute="centerX" secondItem="fHU-HL-7Zc" secondAttribute="centerX" id="Y8d-sL-pLw"/>
                             <constraint firstItem="J0o-0P-DpN" firstAttribute="centerX" secondItem="fHU-HL-7Zc" secondAttribute="centerX" id="YS9-gm-NqJ"/>
                             <constraint firstAttribute="trailing" secondItem="I9q-x4-G6b" secondAttribute="trailing" id="Yo2-6A-o05"/>
-                            <constraint firstItem="Iez-a1-ecO" firstAttribute="top" secondItem="EWj-hO-dG4" secondAttribute="bottom" constant="89" id="aHf-XQ-5v1"/>
+                            <constraint firstItem="Iez-a1-ecO" firstAttribute="top" secondItem="EWj-hO-dG4" secondAttribute="bottom" constant="16" id="aHf-XQ-5v1"/>
                             <constraint firstItem="5ax-Xs-dOw" firstAttribute="top" secondItem="GCa-YC-aPW" secondAttribute="bottom" id="bgq-Ga-IU7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iS9-Vp-Ech" secondAttribute="trailing" constant="-3" id="bzB-oK-iRk"/>
                             <constraint firstItem="I9q-x4-G6b" firstAttribute="height" secondItem="fHU-HL-7Zc" secondAttribute="height" multiplier="0.22" id="dnj-dF-RLm"/>
                             <constraint firstItem="iS9-Vp-Ech" firstAttribute="top" secondItem="hUx-Su-ng9" secondAttribute="bottom" constant="53" id="dre-yi-8Xe"/>
                             <constraint firstItem="0Ec-vC-MW4" firstAttribute="top" secondItem="I9q-x4-G6b" secondAttribute="bottom" id="fkW-Tf-rfL"/>
                             <constraint firstItem="WVJ-gA-nAN" firstAttribute="leading" secondItem="fHU-HL-7Zc" secondAttribute="leading" id="flL-dJ-Nay"/>
-                            <constraint firstItem="EWj-hO-dG4" firstAttribute="top" secondItem="hUx-Su-ng9" secondAttribute="bottom" constant="33" id="hvZ-1H-6Km"/>
+                            <constraint firstItem="EWj-hO-dG4" firstAttribute="top" secondItem="hUx-Su-ng9" secondAttribute="bottom" constant="106" id="hvZ-1H-6Km"/>
                             <constraint firstItem="5ax-Xs-dOw" firstAttribute="top" secondItem="GCa-YC-aPW" secondAttribute="bottom" id="iTW-pa-csT"/>
-                            <constraint firstItem="EWj-hO-dG4" firstAttribute="baseline" secondItem="mV8-DA-h2n" secondAttribute="baseline" id="jCH-n1-h9j"/>
+                            <constraint firstItem="EWj-hO-dG4" firstAttribute="baseline" secondItem="mV8-DA-h2n" secondAttribute="baseline" constant="73" id="jCH-n1-h9j"/>
                             <constraint firstItem="mV8-DA-h2n" firstAttribute="trailing" secondItem="WVJ-gA-nAN" secondAttribute="trailing" id="jTr-X6-GkQ"/>
                             <constraint firstItem="I9q-x4-G6b" firstAttribute="width" secondItem="fHU-HL-7Zc" secondAttribute="width" multiplier="0.4" id="niA-nZ-7EB"/>
                             <constraint firstItem="TNk-MP-Tm3" firstAttribute="centerX" secondItem="fHU-HL-7Zc" secondAttribute="centerX" id="oMF-4M-dh4"/>
@@ -444,6 +444,8 @@
                         <outlet property="imageView2" destination="sCj-uP-kBW" id="ebq-Vp-3dJ"/>
                         <outlet property="imageView3" destination="2YB-t6-thQ" id="JzT-8E-rnD"/>
                         <outlet property="imageView4" destination="2TK-es-z2G" id="fVX-Hh-3nw"/>
+                        <outlet property="infoView" destination="gkr-Kh-W5s" id="aLp-11-W3j"/>
+                        <outlet property="stackViewForSeconds" destination="AMz-NN-aCb" id="ZUm-Pb-c4N"/>
                         <outlet property="testLabel" destination="mV8-DA-h2n" id="AP0-P1-Lmu"/>
                         <outlet property="testLifeLabel" destination="QVG-4A-JnK" id="hlk-dH-Vig"/>
                     </connections>

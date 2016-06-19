@@ -23,6 +23,8 @@ class TopViewController: UIViewController {
     @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var imageView3: UIImageView!
     @IBOutlet weak var imageView4: UIImageView!
+    @IBOutlet weak var infoView: UIImageView!
+    @IBOutlet weak var stackViewForSeconds: UIStackView!
     
     var numImageArray: Array<UIImage> = []//カウントアップ・ダウン用配列
     
@@ -112,7 +114,8 @@ class TopViewController: UIViewController {
         
         if lifePoint > 0{
             testLabel.text = "今日はあと\(lifePoint)回引けます"
-            //今日はあとn回引ける
+            infoView.hidden = true
+            stackViewForSeconds.hidden = true            //今日はあとn回引ける
         }else{
             let twentyFourHoursAfter = calendar.dateByAddingUnit(.Day, value: 1, toDate: NSDate(),options: [])!
             let tomorrowDate = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: twentyFourHoursAfter, options: [])!
