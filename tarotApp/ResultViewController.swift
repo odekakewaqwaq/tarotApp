@@ -91,8 +91,14 @@ class ResultViewController: UIViewController {
     func initResultText(cardNum: Int){ //キャプションの用意
         var caption = ""
         
-        if let text = cardDataArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
-            caption = text
+        if reversed == true{
+            if let text = cardDataArray[cardNum].objectForKey("captionReversed") as? String{//オプショナルがnilでなければ
+                caption = text
+            }
+        }else{
+            if let text = cardDataArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
+                caption = text
+            }
         }
         testLabel.text = caption
         initViewShadow(testLabel)

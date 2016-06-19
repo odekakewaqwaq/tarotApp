@@ -12,6 +12,7 @@ class FortuneViewController: UIViewController {
     @IBOutlet weak var backGroundView: UIImageView!
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var guruguruFaceView: UIImageView!
+    @IBOutlet weak var buttonView: UIView!
     
     let cardImage = UIImage(named:"ura_small")//カード関連の変数
     var cardImageSize = CGSizeMake(1.0, 1.0)
@@ -37,6 +38,9 @@ class FortuneViewController: UIViewController {
         animateTitleView()
         rotateAnim()
         initCardLayer()
+        self.view.bringSubviewToFront(guruguruFaceView)
+        self.view.bringSubviewToFront(titleView)
+        self.view.bringSubviewToFront(buttonView)
     }
 
     func initTitleImageArray(){
@@ -68,7 +72,7 @@ class FortuneViewController: UIViewController {
         let num = Double(i)
         UIView.animateWithDuration(0.5, delay: 0.1 * num, options:[.Repeat, .Autoreverse] , animations: {
             () -> Void in
-            self.titleViewArray[i].center = CGPoint(x: 0, y: 100)
+            self.titleViewArray[i].center = CGPoint(x: 100, y: 100)
             }
             , completion: nil)
         }

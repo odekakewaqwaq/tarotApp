@@ -12,8 +12,9 @@
 		8571BC031D0ACEF40010BB23 /* FortuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571BC021D0ACEF40010BB23 /* FortuneViewController.swift */; };
 		8571BC051D0AD1570010BB23 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571BC041D0AD1570010BB23 /* TweetViewController.swift */; };
 		85B0E60E1D15160200EBBCD0 /* fortunemoc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85B0E60D1D15160200EBBCD0 /* fortunemoc.jpg */; };
+		85B0E6121D161C9900EBBCD0 /* TarotData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B0E6111D161C9900EBBCD0 /* TarotData.plist */; };
 		85C5F0E01CF6689000B409A3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */; };
-		85C5F0E81CF6EF0600B409A3 /* TarotData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C5F0E71CF6EF0600B409A3 /* TarotData.plist */; };
+		85C5F0E81CF6EF0600B409A3 /* TarotData2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C5F0E71CF6EF0600B409A3 /* TarotData2.plist */; };
 		85E98BB51D117231008F41CF /* caption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85E98BB41D117231008F41CF /* caption.plist */; };
 		85F44A531CF64436003E372E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A521CF64436003E372E /* AppDelegate.swift */; };
 		85F44A551CF64436003E372E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F44A541CF64436003E372E /* ViewController.swift */; };
@@ -31,8 +32,9 @@
 		8571BC021D0ACEF40010BB23 /* FortuneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneViewController.swift; sourceTree = "<group>"; };
 		8571BC041D0AD1570010BB23 /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		85B0E60D1D15160200EBBCD0 /* fortunemoc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fortunemoc.jpg; sourceTree = "<group>"; };
+		85B0E6111D161C9900EBBCD0 /* TarotData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TarotData.plist; sourceTree = "<group>"; };
 		85C5F0DF1CF6689000B409A3 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		85C5F0E71CF6EF0600B409A3 /* TarotData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TarotData.plist; sourceTree = "<group>"; };
+		85C5F0E71CF6EF0600B409A3 /* TarotData2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TarotData2.plist; sourceTree = "<group>"; };
 		85E98BB41D117231008F41CF /* caption.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = caption.plist; sourceTree = "<group>"; };
 		85F44A4F1CF64436003E372E /* tarotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F44A521CF64436003E372E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,9 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				85E98BB41D117231008F41CF /* caption.plist */,
+				85B0E6111D161C9900EBBCD0 /* TarotData.plist */,
 				85FF02A51CF81470008329CC /* コレクションビュー6S横合わせ.jpg */,
 				85B0E60D1D15160200EBBCD0 /* fortunemoc.jpg */,
-				85C5F0E71CF6EF0600B409A3 /* TarotData.plist */,
+				85C5F0E71CF6EF0600B409A3 /* TarotData2.plist */,
 				85F44A521CF64436003E372E /* AppDelegate.swift */,
 				85F44A641CF65E7B003E372E /* mocmoc.jpg */,
 				85F44A541CF64436003E372E /* ViewController.swift */,
@@ -156,11 +159,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B0E6121D161C9900EBBCD0 /* TarotData.plist in Resources */,
 				85E98BB51D117231008F41CF /* caption.plist in Resources */,
 				85F44A5D1CF64436003E372E /* LaunchScreen.storyboard in Resources */,
 				85F44A5A1CF64436003E372E /* Assets.xcassets in Resources */,
 				85F44A581CF64436003E372E /* Main.storyboard in Resources */,
-				85C5F0E81CF6EF0600B409A3 /* TarotData.plist in Resources */,
+				85C5F0E81CF6EF0600B409A3 /* TarotData2.plist in Resources */,
 				85F44A651CF65E7B003E372E /* mocmoc.jpg in Resources */,
 				85FF02A61CF81470008329CC /* コレクションビュー6S横合わせ.jpg in Resources */,
 				85B0E60E1D15160200EBBCD0 /* fortunemoc.jpg in Resources */,
