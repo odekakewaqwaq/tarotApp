@@ -17,6 +17,7 @@ class CaptionViewController: UIViewController {
     let captionDic = ["":""]
     
     override func viewDidLoad() {
+        initViewShadow(imageView)
         super.viewDidLoad()
         initUIGesture()
         initCaptionArray()
@@ -48,7 +49,6 @@ class CaptionViewController: UIViewController {
     }
     
     func initCaptionLabel(){
-        print("initialized label")
         label.hidden = true
     }
     
@@ -75,7 +75,14 @@ class CaptionViewController: UIViewController {
         print("swiped!")
         performSegueWithIdentifier("fromCaptionToCollection", sender: nil)
     }
-    //fromCaptionToCollection
+    
+    func initViewShadow(view :UIView) -> (UIView) {/*ドロップシャドウ設定*/
+        view.layer.shadowColor =  UIColor.blackColor().CGColor
+        view.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        view.layer.shadowOpacity = 0.4 /* 透明度 */
+        view.layer.shadowRadius = 2.0 /* 影の距離 */
+        return view
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

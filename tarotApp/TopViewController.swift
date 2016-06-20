@@ -12,10 +12,14 @@ import Foundation
 class TopViewController: UIViewController {
     let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
     let defaults = NSUserDefaults.standardUserDefaults()
+    var canDrawCard :Bool = false
     
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var testLifeLabel: UILabel!
-    @IBOutlet weak var testRemainSecondLabel: UILabel!
+    
+    //占えない時用ウィンドウ
+    var myWindow: UIWindow!
+    var myWindowButton: UIButton!
     
     //秒数カウントダウン用スイッチ
     @IBOutlet weak var imageView0: UIImageView!
@@ -37,10 +41,20 @@ class TopViewController: UIViewController {
     let infoViewSecondImage = UIImage(named:"remainSecondLabel")
     
     
+    @IBAction func uranauButton(sender: AnyObject) {
+        if canDrawCard {
+            performSegueWithIdentifier("toFortuneView", sender: nil)
+        }else{
+            makeWindow()
+        }
+        
+    }
+    
     // デバッグ用ボタン
     @IBAction func addLifeButton(sender: AnyObject) {
         var life = defaults.integerForKey("lifePoint")
         life += 1
+
         defaults.setInteger(life, forKey: "lifePoint")
         defaults.synchronize()
         print("Life is \(defaults.integerForKey("lifePoint"))")
@@ -58,6 +72,12 @@ class TopViewController: UIViewController {
 //ビューディドロード
     override func viewDidLoad() {
         infoView.contentMode = .ScaleAspectFit
+        stackViewForSeconds.hidden = true
+        stackViewForKaisu.hidden = true
+        
+        myWindow = UIWindow()
+        myWindowButton = UIButton()
+        
         let calendar = NSCalendar.currentCalendar()
         let date = NSDate()
         print("date is \(date)")
@@ -122,13 +142,14 @@ class TopViewController: UIViewController {
         }
         
         if lifePoint > 0{
+            canDrawCard = true
             testLabel.text = "今日はあと\(lifePoint)回引けます"
             infoView.image = infoViewKaisuImage
             stackViewForSeconds.hidden = true
             stackViewForKaisu.hidden = false
             testKaisuImage(lifePoint)
         }else{
-
+            canDrawCard = false
             let twentyFourHoursAfter = calendar.dateByAddingUnit(.Day, value: 1, toDate: NSDate(),options: [])!
             let tomorrowDate = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: twentyFourHoursAfter, options: [])!
             
@@ -165,6 +186,48 @@ class TopViewController: UIViewController {
         kaisuImageView1.image = numImageArray[(kaisuInt1)]
     }
     
+    func makeWindow(){
+        
+        // 背景を白に設定する.
+        myWindow.backgroundColor = UIColor.whiteColor()
+        myWindow.frame = CGRectMake(0, 0, self.view.frame.width * 0.9, self.view.frame.height * 0.4)
+        myWindow.layer.position = CGPointMake(self.view.frame.width/2, self.view.frame.height/2)
+        myWindow.alpha = 0.8
+        myWindow.layer.cornerRadius = 20
+        
+        // myWindowをkeyWindowにする.
+        myWindow.makeKeyWindow()
+        
+        // windowを表示する.
+        self.myWindow.makeKeyAndVisible()
+        
+        // ボタンを作成する.
+        myWindowButton.frame = CGRectMake(0, 0, 100, 60)
+        myWindowButton.backgroundColor = UIColor.orangeColor()
+        myWindowButton.setTitle("戻る", forState: .Normal)
+        myWindowButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        myWindowButton.layer.masksToBounds = true
+        myWindowButton.layer.cornerRadius = 30
+        myWindowButton.layer.position = CGPointMake(self.myWindow.frame.width/2, self.myWindow.frame.height-50)
+        //myWindowButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+        myWindowButton.addTarget(self, action: Selector("onClickMyButton"), forControlEvents: .TouchUpInside)
+        self.myWindow.addSubview(myWindowButton)
+        
+        // TextViewを作成する.
+        let myTextView: UITextView = UITextView(frame: CGRectMake(10, 10, self.myWindow.frame.width - 20, 150))
+        myTextView.backgroundColor = UIColor.clearColor()
+        myTextView.text = "占いは基本１日一回です"
+        myTextView.font = UIFont.systemFontOfSize(CGFloat(15))
+        myTextView.textColor = UIColor.blackColor()
+        myTextView.textAlignment = NSTextAlignment.Left
+        myTextView.editable = false
+        
+        self.myWindow.addSubview(myTextView)
+    }
+    
+    internal func onClickMyButton() {
+            myWindow.hidden = true
+    }
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {//戻ってくるセグエの設定
     }
