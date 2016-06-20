@@ -230,7 +230,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kaisuu_moc" translatesAutoresizingMaskIntoConstraints="NO" id="WVJ-gA-nAN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="WVJ-gA-nAN">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV8-DA-h2n">
@@ -287,6 +287,18 @@
                                     <action selector="addLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="NyT-lC-R9u"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-hO-dG4">
+                                <rect key="frame" x="14" y="126" width="84" height="80"/>
+                                <color key="backgroundColor" red="0.99484628438949585" green="0.75842911005020142" blue="0.50979256629943848" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="a8P-wd-SDX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="ライフリセット"/>
+                                <connections>
+                                    <action selector="resetLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="3IX-jB-hTT"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-4B-yTm">
                                 <rect key="frame" x="0.0" y="534" width="320" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -320,14 +332,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iez-a1-ecO">
                                 <rect key="frame" x="14" y="222" width="292" height="142"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="remainScondLabel" translatesAutoresizingMaskIntoConstraints="NO" id="gkr-Kh-W5s">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh9-dw-aKR">
+                                        <rect key="frame" x="197" y="18" width="95" height="106"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remainKaisuLabel" translatesAutoresizingMaskIntoConstraints="NO" id="gkr-Kh-W5s">
                                         <rect key="frame" x="0.0" y="0.0" width="292" height="142"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmy-Lf-Uod" userLabel="spacerLeftAtInfoView">
                                         <rect key="frame" x="0.0" y="0.0" width="15" height="142"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-17" translatesAutoresizingMaskIntoConstraints="NO" id="AMz-NN-aCb">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="-17" translatesAutoresizingMaskIntoConstraints="NO" id="AMz-NN-aCb">
                                         <rect key="frame" x="15" y="40" width="161" height="63"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_0" translatesAutoresizingMaskIntoConstraints="NO" id="TEJ-YD-5sS">
@@ -347,34 +363,45 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-30" translatesAutoresizingMaskIntoConstraints="NO" id="NGV-Vh-hjg">
+                                        <rect key="frame" x="80" y="18" width="117" height="92"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_6" translatesAutoresizingMaskIntoConstraints="NO" id="9SG-pP-16M">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="92"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_8" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-xx-Y7x">
+                                                <rect key="frame" x="44" y="0.0" width="73" height="92"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Cmy-Lf-Uod" firstAttribute="centerY" secondItem="Iez-a1-ecO" secondAttribute="centerY" id="3Ie-Eg-OHs"/>
                                     <constraint firstItem="AMz-NN-aCb" firstAttribute="centerY" secondItem="Iez-a1-ecO" secondAttribute="centerY" id="4Q0-I1-NXT"/>
+                                    <constraint firstItem="gkr-Kh-W5s" firstAttribute="centerX" secondItem="Iez-a1-ecO" secondAttribute="centerX" id="A5i-xb-xcJ"/>
+                                    <constraint firstItem="NGV-Vh-hjg" firstAttribute="height" secondItem="Iez-a1-ecO" secondAttribute="height" multiplier="0.65" id="AvP-DI-JcW"/>
+                                    <constraint firstItem="gkr-Kh-W5s" firstAttribute="height" secondItem="Iez-a1-ecO" secondAttribute="height" id="EST-gw-k7n"/>
+                                    <constraint firstItem="gkr-Kh-W5s" firstAttribute="width" secondItem="Iez-a1-ecO" secondAttribute="width" id="G2a-1J-VDp"/>
                                     <constraint firstItem="Cmy-Lf-Uod" firstAttribute="height" secondItem="Iez-a1-ecO" secondAttribute="height" id="Jjn-F6-2zo"/>
+                                    <constraint firstItem="Fh9-dw-aKR" firstAttribute="top" secondItem="NGV-Vh-hjg" secondAttribute="top" id="MVB-bH-i1W"/>
                                     <constraint firstItem="AMz-NN-aCb" firstAttribute="height" secondItem="Iez-a1-ecO" secondAttribute="height" multiplier="0.45" id="TOc-Te-gX7"/>
                                     <constraint firstItem="Cmy-Lf-Uod" firstAttribute="leading" secondItem="Iez-a1-ecO" secondAttribute="leading" id="V97-Op-9zR"/>
+                                    <constraint firstItem="gkr-Kh-W5s" firstAttribute="centerY" secondItem="Iez-a1-ecO" secondAttribute="centerY" id="VhD-wP-E0W"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fh9-dw-aKR" secondAttribute="trailing" id="Wd9-zo-oa6"/>
                                     <constraint firstItem="AMz-NN-aCb" firstAttribute="leading" secondItem="Cmy-Lf-Uod" secondAttribute="trailing" id="XWP-BQ-JAh"/>
                                     <constraint firstItem="Cmy-Lf-Uod" firstAttribute="width" secondItem="Iez-a1-ecO" secondAttribute="width" multiplier="0.05" id="dnn-u0-glk"/>
+                                    <constraint firstItem="NGV-Vh-hjg" firstAttribute="width" secondItem="Iez-a1-ecO" secondAttribute="width" multiplier="0.4" id="dq2-NZ-7XE"/>
                                     <constraint firstItem="AMz-NN-aCb" firstAttribute="width" secondItem="Iez-a1-ecO" secondAttribute="width" multiplier="0.55" id="jiz-gi-7nH"/>
+                                    <constraint firstItem="Fh9-dw-aKR" firstAttribute="centerY" secondItem="Iez-a1-ecO" secondAttribute="centerY" id="jjJ-zp-Lya"/>
+                                    <constraint firstItem="Fh9-dw-aKR" firstAttribute="height" secondItem="Iez-a1-ecO" secondAttribute="height" multiplier="0.74" id="poT-Yo-ROr"/>
+                                    <constraint firstItem="Fh9-dw-aKR" firstAttribute="width" secondItem="Iez-a1-ecO" secondAttribute="width" multiplier="0.325" id="upC-Gw-jLh"/>
+                                    <constraint firstItem="Fh9-dw-aKR" firstAttribute="leading" secondItem="NGV-Vh-hjg" secondAttribute="trailing" id="zmc-uz-Xc1"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kanja" translatesAutoresizingMaskIntoConstraints="NO" id="I9q-x4-G6b">
                                 <rect key="frame" x="192" y="270" width="128" height="125"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-hO-dG4">
-                                <rect key="frame" x="14" y="126" width="84" height="80"/>
-                                <color key="backgroundColor" red="0.99484628438949585" green="0.75842911005020142" blue="0.50979256629943848" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="a8P-wd-SDX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="ライフリセット"/>
-                                <connections>
-                                    <action selector="resetLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="3IX-jB-hTT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -445,6 +472,9 @@
                         <outlet property="imageView3" destination="2YB-t6-thQ" id="JzT-8E-rnD"/>
                         <outlet property="imageView4" destination="2TK-es-z2G" id="fVX-Hh-3nw"/>
                         <outlet property="infoView" destination="gkr-Kh-W5s" id="aLp-11-W3j"/>
+                        <outlet property="kaisuImageView0" destination="9SG-pP-16M" id="OT9-Vd-0y5"/>
+                        <outlet property="kaisuImageView1" destination="8uK-xx-Y7x" id="4NU-Sq-xOT"/>
+                        <outlet property="stackViewForKaisu" destination="NGV-Vh-hjg" id="si9-Vy-Wj5"/>
                         <outlet property="stackViewForSeconds" destination="AMz-NN-aCb" id="ZUm-Pb-c4N"/>
                         <outlet property="testLabel" destination="mV8-DA-h2n" id="AP0-P1-Lmu"/>
                         <outlet property="testLifeLabel" destination="QVG-4A-JnK" id="hlk-dH-Vig"/>
@@ -714,20 +744,22 @@
         <image name="face0" width="707" height="1339"/>
         <image name="fortunemoc.jpg" width="1242" height="2208"/>
         <image name="guruguru" width="669" height="750"/>
-        <image name="kaisuu_moc" width="1242" height="2208"/>
         <image name="kanja" width="433" height="523"/>
         <image name="kariTweetView" width="1242" height="2208"/>
         <image name="mametishikiButton" width="965" height="138"/>
         <image name="mocmoc.jpg" width="640" height="1136"/>
         <image name="name_r_13" width="106" height="818"/>
         <image name="num_10" width="106" height="818"/>
-        <image name="remainScondLabel" width="1143" height="571"/>
+        <image name="remainKaisuLabel" width="1143" height="593"/>
         <image name="resultBackground" width="640" height="1136"/>
         <image name="timeNum_0" width="507" height="583"/>
         <image name="timeNum_1" width="507" height="583"/>
         <image name="timeNum_4" width="507" height="583"/>
+        <image name="timeNum_6" width="507" height="583"/>
         <image name="timeNum_7" width="507" height="583"/>
+        <image name="timeNum_8" width="507" height="583"/>
         <image name="timeNum_9" width="507" height="583"/>
+        <image name="topBackGround" width="1242" height="2208"/>
         <image name="tweet" width="559" height="134"/>
         <image name="uranauButton" width="965" height="138"/>
         <image name="uzumaki" width="2500" height="2500"/>

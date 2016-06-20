@@ -26,7 +26,15 @@ class TopViewController: UIViewController {
     @IBOutlet weak var infoView: UIImageView!
     @IBOutlet weak var stackViewForSeconds: UIStackView!
     
+    //回数用スタックビュー
+    @IBOutlet weak var kaisuImageView0: UIImageView!
+    @IBOutlet weak var kaisuImageView1: UIImageView!
+    
+    @IBOutlet weak var stackViewForKaisu: UIStackView!
+    
     var numImageArray: Array<UIImage> = []//カウントアップ・ダウン用配列
+    let infoViewKaisuImage = UIImage(named:"remainKaisuLabel")
+    let infoViewSecondImage = UIImage(named:"remainSecondLabel")
     
     
     // デバッグ用ボタン
@@ -49,6 +57,7 @@ class TopViewController: UIViewController {
 
 //ビューディドロード
     override func viewDidLoad() {
+        infoView.contentMode = .ScaleAspectFit
         let calendar = NSCalendar.currentCalendar()
         let date = NSDate()
         print("date is \(date)")
@@ -58,7 +67,7 @@ class TopViewController: UIViewController {
         initLifePoint()
         initLastTimeDrewAt()
         initNumImageArray()
-        judgeAnnotation()
+        //judgeAnnotation()
         let annotationTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "judgeAnnotation", userInfo: nil, repeats: true)
     }
 
@@ -114,15 +123,21 @@ class TopViewController: UIViewController {
         
         if lifePoint > 0{
             testLabel.text = "今日はあと\(lifePoint)回引けます"
-            infoView.hidden = true
-            stackViewForSeconds.hidden = true            //今日はあとn回引ける
+            infoView.image = infoViewKaisuImage
+            stackViewForSeconds.hidden = true
+            stackViewForKaisu.hidden = false
+            testKaisuImage(lifePoint)
         }else{
+
             let twentyFourHoursAfter = calendar.dateByAddingUnit(.Day, value: 1, toDate: NSDate(),options: [])!
             let tomorrowDate = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: twentyFourHoursAfter, options: [])!
             
             let time = NSDate().timeIntervalSinceDate(tomorrowDate) // 現在時刻と開始時刻の差
             let time2 = abs(Int(time))
+            infoView.image = infoViewSecondImage
             testNumImage(time2)
+            stackViewForSeconds.hidden = false
+            stackViewForKaisu.hidden = true
             testLabel.text = "あと\(time2)秒で引けまぽよ"
         }
     }
@@ -140,7 +155,14 @@ class TopViewController: UIViewController {
         imageView2.image = numImageArray[(numArray[2])]
         imageView3.image = numImageArray[(numArray[3])]
         imageView4.image = numImageArray[(numArray[4])]
-        
+    }
+    
+    func testKaisuImage(numInt : Int){
+        let kaisuInt0 = Int((numInt % 100) / 10)
+        let kaisuInt1 = Int(numInt % 10)
+    
+        kaisuImageView0.image = numImageArray[(kaisuInt0)]
+        kaisuImageView1.image = numImageArray[(kaisuInt1)]
     }
     
     
