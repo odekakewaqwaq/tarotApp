@@ -62,7 +62,9 @@ class ResultViewController: UIViewController {
     
     func recordLifePoint(){
         var lifePoint = defaults.integerForKey("lifePoint")
-        lifePoint -= 1
+        if lifePoint > 0{
+            lifePoint -= 1
+        }
         defaults.setInteger(lifePoint, forKey: "lifePoint")
     }
     

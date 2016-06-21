@@ -46,6 +46,15 @@ class CaptionViewController: UIViewController {
         swipeUpGesture.direction = UISwipeGestureRecognizerDirection.Up
         self.view.addGestureRecognizer(swipeUpGesture)
         
+        let swipeRightGesture:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
+        swipeUpGesture.numberOfTouchesRequired = 1
+        swipeUpGesture.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRightGesture)
+        
+        let swipeLeftGesture:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
+        swipeUpGesture.numberOfTouchesRequired = 1
+        swipeUpGesture.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeftGesture)
     }
     
     func initCaptionLabel(){
@@ -76,7 +85,7 @@ class CaptionViewController: UIViewController {
         performSegueWithIdentifier("fromCaptionToCollection", sender: nil)
     }
     
-    func initViewShadow(view :UIView) -> (UIView) {/*ドロップシャドウ設定*/
+    func initViewShadow(view :UIView) -> (UIView) {/*基本のドロップシャドウ設定*/
         view.layer.shadowColor =  UIColor.blackColor().CGColor
         view.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
         view.layer.shadowOpacity = 0.4 /* 透明度 */

@@ -137,8 +137,9 @@ class TopViewController: UIViewController {
         if calendar.isDate(lastTimeDrewAt, inSameDayAsDate: currentDate){
             //print("もう引いた")
         }else{
+            if lifePoint < 1{
             lifePoint += 1
-            //print("まだ引いてない")
+            }
         }
         
         if lifePoint > 0{
@@ -226,7 +227,7 @@ class TopViewController: UIViewController {
     }
     
     internal func onClickMyButton() {
-            myWindow.hidden = true
+            myWindow = nil
     }
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {//戻ってくるセグエの設定
