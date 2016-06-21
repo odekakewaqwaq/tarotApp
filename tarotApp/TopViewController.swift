@@ -45,7 +45,7 @@ class TopViewController: UIViewController {
         if canDrawCard {
             performSegueWithIdentifier("toFortuneView", sender: nil)
         }else{
-            makeWindow()
+            onClickMyButton()
         }
         
     }
@@ -187,47 +187,21 @@ class TopViewController: UIViewController {
         kaisuImageView1.image = numImageArray[(kaisuInt1)]
     }
     
-    func makeWindow(){
+    func onClickMyButton(){
         
-        // 背景を白に設定する.
-        myWindow.backgroundColor = UIColor.whiteColor()
-        myWindow.frame = CGRectMake(0, 0, self.view.frame.width * 0.9, self.view.frame.height * 0.4)
-        myWindow.layer.position = CGPointMake(self.view.frame.width/2, self.view.frame.height/2)
-        myWindow.alpha = 0.8
-        myWindow.layer.cornerRadius = 20
+        // UIAlertControllerを作成する.
+        let myAlert: UIAlertController = UIAlertController(title: "占いは１日1回まで", message: "また来てね", preferredStyle: .Alert)
         
-        // myWindowをkeyWindowにする.
-        myWindow.makeKeyWindow()
+        // OKのアクションを作成する.
+        let myOkAction = UIAlertAction(title: "OK", style: .Default) { action in
+            print("Action OK!!")
+        }
         
-        // windowを表示する.
-        self.myWindow.makeKeyAndVisible()
+        // OKのActionを追加する.
+        myAlert.addAction(myOkAction)
         
-        // ボタンを作成する.
-        myWindowButton.frame = CGRectMake(0, 0, 100, 60)
-        myWindowButton.backgroundColor = UIColor.orangeColor()
-        myWindowButton.setTitle("戻る", forState: .Normal)
-        myWindowButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        myWindowButton.layer.masksToBounds = true
-        myWindowButton.layer.cornerRadius = 30
-        myWindowButton.layer.position = CGPointMake(self.myWindow.frame.width/2, self.myWindow.frame.height-50)
-        //myWindowButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        myWindowButton.addTarget(self, action: Selector("onClickMyButton"), forControlEvents: .TouchUpInside)
-        self.myWindow.addSubview(myWindowButton)
-        
-        // TextViewを作成する.
-        let myTextView: UITextView = UITextView(frame: CGRectMake(10, 10, self.myWindow.frame.width - 20, 150))
-        myTextView.backgroundColor = UIColor.clearColor()
-        myTextView.text = "占いは基本１日一回です"
-        myTextView.font = UIFont.systemFontOfSize(CGFloat(15))
-        myTextView.textColor = UIColor.blackColor()
-        myTextView.textAlignment = NSTextAlignment.Left
-        myTextView.editable = false
-        
-        self.myWindow.addSubview(myTextView)
-    }
-    
-    internal func onClickMyButton() {
-            myWindow = nil
+        // UIAlertを発動する.
+        presentViewController(myAlert, animated: true, completion: nil)
     }
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {//戻ってくるセグエの設定

@@ -187,7 +187,7 @@
                                     <constraint firstItem="s1Y-Nv-yAI" firstAttribute="centerY" secondItem="9jm-ug-lTk" secondAttribute="centerY" id="WbU-uG-R3H"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKD-xY-PI4" userLabel="aaa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tKD-xY-PI4" userLabel="aaa">
                                 <rect key="frame" x="40" y="347" width="240" height="153"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Label
