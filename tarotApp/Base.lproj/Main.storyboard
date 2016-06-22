@@ -247,58 +247,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AN9-Ji-ncc" userLabel="debug">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV8-DA-h2n">
-                                        <rect key="frame" x="-40" y="22" width="320" height="84"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="84" id="1XV-9y-dNL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ライフいくつ？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVG-4A-JnK">
-                                        <rect key="frame" x="-40" y="22" width="320" height="84"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="84" id="xpw-sG-qa4"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-Vp-Ech">
-                                        <rect key="frame" x="76" y="28" width="88" height="72"/>
-                                        <color key="backgroundColor" red="0.51777827739715576" green="0.83312618732452393" blue="0.99909055233001709" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="88" id="8VN-Eb-aQq"/>
-                                        </constraints>
-                                        <color key="tintColor" red="0.81000636930000003" green="0.93918441129999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="ライフ増えるボタン">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="NyT-lC-R9u"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-hO-dG4">
-                                        <rect key="frame" x="78" y="24" width="84" height="80"/>
-                                        <color key="backgroundColor" red="0.99484628438949585" green="0.75842911005020142" blue="0.50979256629943848" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="84" id="a8P-wd-SDX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                        <state key="normal" title="ライフリセット"/>
-                                        <connections>
-                                            <action selector="resetLifeButton:" destination="de2-94-LaM" eventType="touchUpInside" id="3IX-jB-hTT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="WVJ-gA-nAN">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
@@ -366,10 +314,10 @@
                                                 <rect key="frame" x="29" y="0.0" width="46" height="63"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_4" translatesAutoresizingMaskIntoConstraints="NO" id="sCj-uP-kBW">
-                                                <rect key="frame" x="58" y="0.0" width="45" height="63"/>
+                                                <rect key="frame" x="58" y="0.0" width="46" height="63"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_1" translatesAutoresizingMaskIntoConstraints="NO" id="2YB-t6-thQ">
-                                                <rect key="frame" x="86" y="0.0" width="46" height="63"/>
+                                                <rect key="frame" x="87" y="0.0" width="46" height="63"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_9" translatesAutoresizingMaskIntoConstraints="NO" id="2TK-es-z2G">
                                                 <rect key="frame" x="115" y="0.0" width="46" height="63"/>
@@ -383,7 +331,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="92"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_8" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-xx-Y7x">
-                                                <rect key="frame" x="44" y="0.0" width="73" height="92"/>
+                                                <rect key="frame" x="44" y="0.0" width="74" height="92"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -494,8 +442,6 @@
                         <outlet property="kaisuImageView1" destination="8uK-xx-Y7x" id="4NU-Sq-xOT"/>
                         <outlet property="stackViewForKaisu" destination="NGV-Vh-hjg" id="si9-Vy-Wj5"/>
                         <outlet property="stackViewForSeconds" destination="AMz-NN-aCb" id="ZUm-Pb-c4N"/>
-                        <outlet property="testLabel" destination="mV8-DA-h2n" id="AP0-P1-Lmu"/>
-                        <outlet property="testLifeLabel" destination="QVG-4A-JnK" id="hlk-dH-Vig"/>
                         <segue destination="dCt-Om-Fx1" kind="modal" identifier="toFortuneView" id="U1R-q0-mu2"/>
                     </connections>
                 </viewController>

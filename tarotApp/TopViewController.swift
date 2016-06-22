@@ -14,12 +14,6 @@ class TopViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     var canDrawCard :Bool = false
     
-    @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var testLifeLabel: UILabel!
-    
-    //占えない時用ウィンドウ
-    var myWindow: UIWindow!
-    var myWindowButton: UIButton!
     
     //秒数カウントダウン用スイッチ
     @IBOutlet weak var imageView0: UIImageView!
@@ -51,7 +45,7 @@ class TopViewController: UIViewController {
     }
     
     // デバッグ用ボタン
-    @IBAction func addLifeButton(sender: AnyObject) {
+    /*@IBAction func addLifeButton(sender: AnyObject) {
         var life = defaults.integerForKey("lifePoint")
         life += 1
 
@@ -67,17 +61,14 @@ class TopViewController: UIViewController {
         defaults.synchronize()
         print("Life is \(defaults.integerForKey("lifePoint"))")
         testLifeLabel.text = "残りライフ　\(defaults.integerForKey("lifePoint"))"
-    }
+    }*/
 
 //ビューディドロード
     override func viewDidLoad() {
         infoView.contentMode = .ScaleAspectFit
         stackViewForSeconds.hidden = true
         stackViewForKaisu.hidden = true
-        
-        myWindow = UIWindow()
-        myWindowButton = UIButton()
-        
+
         let calendar = NSCalendar.currentCalendar()
         let date = NSDate()
         print("date is \(date)")
@@ -144,7 +135,6 @@ class TopViewController: UIViewController {
         
         if lifePoint > 0{
             canDrawCard = true
-            testLabel.text = "今日はあと\(lifePoint)回引けます"
             infoView.image = infoViewKaisuImage
             stackViewForSeconds.hidden = true
             stackViewForKaisu.hidden = false
@@ -160,7 +150,6 @@ class TopViewController: UIViewController {
             testNumImage(time2)
             stackViewForSeconds.hidden = false
             stackViewForKaisu.hidden = true
-            testLabel.text = "あと\(time2)秒で引けまぽよ"
         }
     }
     
