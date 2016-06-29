@@ -10,16 +10,14 @@ import UIKit
 
 class CollectionViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    // 画像の名前を配列とする
-
-    let faceImage:UIImage? = UIImage(named:"thumb0")//数字札のイメージ読み込み
-    let numberImage:UIImage? = UIImage(named:"index_1")//faceImageView.image = faceImage//数字札のイメージに貼り付け
+    let faceImage:UIImage? = UIImage(named:"thumb0")//カードイラストのイメージ読み込み
+    let numberImage:UIImage? = UIImage(named:"index_1")//数字札のイメージに貼り付け
     
     var faceImageArr: [UIImage?] = []
     var numberImageArr: [UIImage?] = []
     var selectedNum : Int = 2500
     var cardArray : Array<Int> = []//カードの引かれた回数
-    var modifiedCardArray : Array<Int> = []//カードの引かれた回数をレイアウトように変えたもの
+    var modifiedCardArray : Array<Int> = []//カードの引かれた回数をレイアウト用に変えたもの
     var numArray : Array<String> = []//レイアウト用のファイル名インデックスの列
     
     override func viewDidLoad() {
@@ -45,17 +43,11 @@ class CollectionViewController: UIViewController ,UICollectionViewDataSource, UI
         for i in (1 ... 21) {
             numArray.append("\(i)")
         }
-        
         numArray.insert( "a", atIndex: 20)
         numArray.insert( "0", atIndex: 22)
         numArray.insert( "b", atIndex: 23)
     }
     
-    func modifyArray(){//行列をレイアウト用に組み替え
-        
-    }
-   
-
     func initImageArray(){
         for i in (0 ... 23) {
             let thumbImageName = "thumb_" + numArray[i]
@@ -71,8 +63,6 @@ class CollectionViewController: UIViewController ,UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let testCell:UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
-        
-        // Tag番号を使ってImageViewのインスタンス生成
         let faceImageView = testCell.contentView.viewWithTag(1) as! UIImageView //タグ1がthumb
         faceImageView.image = faceImageArr[indexPath.row]
         //faceImageView.image = faceImage
@@ -83,34 +73,28 @@ class CollectionViewController: UIViewController ,UICollectionViewDataSource, UI
         if cardArray[indexPath.row] > 0 || indexPath.row == 20 || indexPath.row == 23 {
             numberImageView.hidden = true
         }
-        
         return testCell
     }
     
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        //let cellSize:CGFloat = collectionView.frame.size.width * 0.22
         let cellSize:CGFloat = collectionView.frame.size.width * 0.2175
         // 正方形で返すためにwidth,heightを同じにする
         return CGSizeMake(cellSize, cellSize)
     }
     
-    
-    //section 数の設定、今回は１つにセット
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // 要素数を入れる、要素以上の数字を入れると表示でエラーとなる
         return numArray.count
     }
     
     func collectionView(collectionView: UICollectionView,
-                          layout collectionViewLayout: UICollectionViewLayout,
-                                 minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat{
-        //行間調整
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat{//行間調整
         let linespacing:CGFloat = collectionView.frame.size.width * 0.055
         return linespacing
     }

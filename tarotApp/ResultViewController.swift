@@ -23,11 +23,6 @@ class ResultViewController: UIViewController {
     let plistPath = NSBundle.mainBundle().pathForResource("TarotData", ofType: "plist")
     let defaults = NSUserDefaults.standardUserDefaults()
     let calendar = NSCalendar.currentCalendar()
-
-    @IBAction func backButton(sender: AnyObject) {
-    }
-    @IBAction func forwardbutton(sender: AnyObject) {
-    }
     
    override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +37,6 @@ class ResultViewController: UIViewController {
     func initCardArray(){//辞書の呼び出し
         cardDataArray = NSArray(contentsOfFile: plistPath!)! //!のタイミングがよーわからん
     }
-    
-    
     
     func recordCardNumber(){//引いた数を記録(あとで図鑑に使う)
         if var cardArray = defaults.arrayForKey("cardArray") as? Array<Int>{
@@ -85,7 +78,6 @@ class ResultViewController: UIViewController {
 
         nameImageView.image = nameImage
         
-        //initViewShadow(faceImageView)
         initViewShadow(cardSpacerView)
     }
     
@@ -94,11 +86,11 @@ class ResultViewController: UIViewController {
         var caption = ""
         
         if reversed == true{
-            if let text = cardDataArray[cardNum].objectForKey("captionReversed") as? String{//オプショナルがnilでなければ
+            if let text = cardDataArray[cardNum].objectForKey("captionReversed") as? String{
                 caption = text
             }
         }else{
-            if let text = cardDataArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
+            if let text = cardDataArray[cardNum].objectForKey("captionUpright") as? String{
                 caption = text
             }
         }

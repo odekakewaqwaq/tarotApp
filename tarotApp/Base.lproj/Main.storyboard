@@ -314,10 +314,10 @@
                                                 <rect key="frame" x="29" y="0.0" width="46" height="63"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_4" translatesAutoresizingMaskIntoConstraints="NO" id="sCj-uP-kBW">
-                                                <rect key="frame" x="58" y="0.0" width="46" height="63"/>
+                                                <rect key="frame" x="58" y="0.0" width="45" height="63"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_1" translatesAutoresizingMaskIntoConstraints="NO" id="2YB-t6-thQ">
-                                                <rect key="frame" x="87" y="0.0" width="46" height="63"/>
+                                                <rect key="frame" x="86" y="0.0" width="46" height="63"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_9" translatesAutoresizingMaskIntoConstraints="NO" id="2TK-es-z2G">
                                                 <rect key="frame" x="115" y="0.0" width="46" height="63"/>
@@ -331,7 +331,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="92"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeNum_8" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-xx-Y7x">
-                                                <rect key="frame" x="44" y="0.0" width="74" height="92"/>
+                                                <rect key="frame" x="44" y="0.0" width="73" height="92"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -734,7 +734,7 @@
         <image name="timeNum_8" width="507" height="583"/>
         <image name="timeNum_9" width="507" height="583"/>
         <image name="topBackGround" width="1242" height="2208"/>
-        <image name="topTitle" width="1242" height="958"/>
+        <image name="topTitle" width="1242" height="928"/>
         <image name="tweet" width="559" height="134"/>
         <image name="uranauButton" width="965" height="138"/>
         <image name="uzumaki" width="2500" height="2500"/>

@@ -29,8 +29,6 @@ class FortuneViewController: UIViewController {
         initTitleView()
         initGuruGuruFace()
         initCardImageSize()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -65,10 +63,9 @@ class FortuneViewController: UIViewController {
         self.guruguruFaceView.transform = CGAffineTransformMakeRotation(guruguruFaceAngle * -0.7)
     }
 
-    
     func animateTitleView(){//占い中表示のアニメ
         let angle = self.guruguruFaceAngle
-        for (i,a) in titleViewArray.enumerate() {
+        for (i,_) in titleViewArray.enumerate() {
         let num = Double(i)
         UIView.animateWithDuration(0.5, delay: 0.1 * num, options:[.Repeat, .Autoreverse] , animations: {
             () -> Void in
@@ -133,13 +130,12 @@ class FortuneViewController: UIViewController {
         
         replicatorLayer.instanceCount = 22
         replicatorLayer.instanceDelay = 0.5
-        var angle = (2.0 * M_PI)/Double(replicatorLayer.instanceCount)
+        let angle = (2.0 * M_PI)/Double(replicatorLayer.instanceCount)
         replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat(angle), 0, 0, 50)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

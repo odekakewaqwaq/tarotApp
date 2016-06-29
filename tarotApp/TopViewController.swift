@@ -14,7 +14,6 @@ class TopViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     var canDrawCard :Bool = false
     
-    
     //秒数カウントダウン用スイッチ
     @IBOutlet weak var imageView0: UIImageView!
     @IBOutlet weak var imageView1: UIImageView!
@@ -27,43 +26,21 @@ class TopViewController: UIViewController {
     //回数用スタックビュー
     @IBOutlet weak var kaisuImageView0: UIImageView!
     @IBOutlet weak var kaisuImageView1: UIImageView!
-    
     @IBOutlet weak var stackViewForKaisu: UIStackView!
     
     var numImageArray: Array<UIImage> = []//カウントアップ・ダウン用配列
     let infoViewKaisuImage = UIImage(named:"remainKaisuLabel")
     let infoViewSecondImage = UIImage(named:"remainSecondLabel")
     
-    
+
     @IBAction func uranauButton(sender: AnyObject) {
         if canDrawCard {
             performSegueWithIdentifier("toFortuneView", sender: nil)
         }else{
             onClickMyButton()
         }
-        
     }
     
-    // デバッグ用ボタン
-    /*@IBAction func addLifeButton(sender: AnyObject) {
-        var life = defaults.integerForKey("lifePoint")
-        life += 1
-
-        defaults.setInteger(life, forKey: "lifePoint")
-        defaults.synchronize()
-        print("Life is \(defaults.integerForKey("lifePoint"))")
-        testLifeLabel.text = "残りライフ　\(defaults.integerForKey("lifePoint"))"
-    }
-    @IBAction func resetLifeButton(sender: AnyObject) {
-        var life = defaults.integerForKey("lifePoint")
-        life = 0
-        defaults.setInteger(life, forKey: "lifePoint")
-        defaults.synchronize()
-        print("Life is \(defaults.integerForKey("lifePoint"))")
-        testLifeLabel.text = "残りライフ　\(defaults.integerForKey("lifePoint"))"
-    }*/
-
-//ビューディドロード
     override func viewDidLoad() {
         infoView.contentMode = .ScaleAspectFit
         stackViewForSeconds.hidden = true
@@ -79,7 +56,7 @@ class TopViewController: UIViewController {
         initLastTimeDrewAt()
         initNumImageArray()
         //judgeAnnotation()
-        let annotationTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "judgeAnnotation", userInfo: nil, repeats: true)
+        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "judgeAnnotation", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,16 +71,14 @@ class TopViewController: UIViewController {
     
     func initCardArray(){//0が22個の行列つくる
         var cardArray: [Int] = []
-        for i in 0...21 {
+        for _ in 0...21 {
             cardArray.append(0)
         }
-
         let dic = ["cardArray": cardArray]
         defaults.registerDefaults(dic)
         defaults.synchronize()
-        
-        var testArray = defaults.arrayForKey("cardArray")
-        //print("FirstViewArray\(testArray)")
+        let testArray = defaults.arrayForKey("cardArray")
+        print("FirstViewArray\(testArray)")
     }
     
     func initLifePoint(){
@@ -126,7 +101,6 @@ class TopViewController: UIViewController {
         let currentDate = NSDate()
         
         if calendar.isDate(lastTimeDrewAt, inSameDayAsDate: currentDate){
-            //print("もう引いた")
         }else{
             if lifePoint < 1{
             lifePoint += 1
@@ -143,8 +117,7 @@ class TopViewController: UIViewController {
             canDrawCard = false
             let twentyFourHoursAfter = calendar.dateByAddingUnit(.Day, value: 1, toDate: NSDate(),options: [])!
             let tomorrowDate = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: twentyFourHoursAfter, options: [])!
-            
-            let time = NSDate().timeIntervalSinceDate(tomorrowDate) // 現在時刻と開始時刻の差
+            let time = NSDate().timeIntervalSinceDate(tomorrowDate)
             let time2 = abs(Int(time))
             infoView.image = infoViewSecondImage
             testNumImage(time2)

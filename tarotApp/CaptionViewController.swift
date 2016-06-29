@@ -27,7 +27,6 @@ class CaptionViewController: UIViewController {
     func initCaptionArray(){//辞書の呼び出し
         let captionDic = NSDictionary(contentsOfFile: plistPath!)
         print(plistPath)
-        //        if let text = cardDataArray[cardNum].objectForKey("captionUpright") as? String{//オプショナルがnilでなければ
         self.captionText = (captionDic?.objectForKey("\(cardNum)")?.objectForKey("caption") as? String)!
             print(captionText)
     }
